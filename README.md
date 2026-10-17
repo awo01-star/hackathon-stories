@@ -1,6 +1,10 @@
 # Stories: Profit Root-Cause Investigation
 
-Team members: **TODO — add your team's names before submission.**
+**Team members:**
+
+- Aya Oueidat — awo01@mail.aub.edu
+- Hawraa Salloum — hhs28@mail.aub.edu
+- Zahraa Salloum — zhs15@mail.aub.edu
 
 **Start with the [root-cause report](reports/root_cause/REPORT.md) and [executed EDA notebook](notebooks/02_root_cause_investigation.ipynb).** The focus is explaining recorded dollar differences, testing alternative explanations and identifying the evidence needed before changing the business.
 
@@ -312,4 +316,4 @@ Additional reproducibility scripts are in `src/`; each model pipeline accepts `-
 
 ## Submission
 
-Fill in team names and submit one public GitHub repository URL. This workspace contains source and aggregate evidence; no public GitHub submission has been created. Source CSVs, individual prediction records, serialized models and exports stay in ignored `data/` or `artifacts/` folders. Do not put the company CSV at the repository root. Review aggregate evidence for permitted release before publication. The private app deployment is separate from the public-repository submission.
+Submit one public GitHub repository URL; team members are listed at the top of this README. This workspace contains source and aggregate evidence; no public GitHub submission has been created. Source CSVs, individual prediction records, serialized models and exports stay in ignored `data/` or `artifacts/` folders. Do not put the company CSV at the repository root. Review aggregate evidence for permitted release before publication. The private app deployment is separate from the public-repository submission.
