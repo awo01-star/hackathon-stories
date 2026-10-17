@@ -2,6 +2,10 @@
 
 **Team:** Aya Oueidat (awo01@mail.aub.edu) · Hawraa Salloum (hhs28@mail.aub.edu) · Zahraa Salloum (zhs15@mail.aub.edu)
 
+## Business problem
+
+Stories needs to decide which changes to promotions, pricing and branch costs could improve gross profit. Higher sales alone do not show whether a discount pays for itself, and lower branch profit does not reveal whether the cause is traffic, pricing or accounting allocations. We investigate these differences to identify which actions Stories should test first, their potential value, and the evidence needed before wider implementation.
+
 ## Conclusion
 
 **Stories' discounts lose money, and the file lets us measure it.** Harbour ran 15% off nine cold coffees and desserts for two 8-day windows (12 to 19 March, 12 to 19 May). Garden and Uptown sold the same nine items at full price, which makes them a control group. Compared with them, Harbour's units of those items rose **+6.1%** (95% placebo range −9% to +25%). A 15% cut on items with a 66% margin needs **+29%** more units just to break even. So the campaign cost about **$350 of gross profit in 16 days**, and we can say it lost money with about 99% confidence ([reports/promo_audit/REPORT.md](reports/promo_audit/REPORT.md)).
