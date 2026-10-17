@@ -1,0 +1,11 @@
+{
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "forecastSHA256": "38f4d725e17d9409da72c536e69e12b494e47059cc3de6d7530d7b1459d4c7db",
+  "rows": 4860,
+  "branchProducts": 135,
+  "planningDate": "2026-07-01",
+  "noRetraining": true,
+  "assumedUpliftNotEstimated": true,
+  "reference": "full-list-price, no-discount GP",
+  "originalInputsUnchanged": true
+}

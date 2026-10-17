@@ -113,6 +113,11 @@ Other distinctions matter: recorded sales hours do not prove opening hours; miss
 
 `python3 src/root_cause.py --data /path/to/stories_transactions.csv` generates the [machine-readable findings](findings.json), detailed CSVs and figures. The executed notebook is `notebooks/02_root_cause_investigation.ipynb`. Raw input and the user's notebook are unchanged. Source SHA-256: `{f['sourceSHA256']}`. All dollar comparisons refer to the observed six-month file or explicitly identified daily amounts; none is an observed treatment benefit.
 '''
+framework = R/'reports/BUSINESS_DECISION_FRAMEWORK.md'
+if framework.exists():
+    purpose = framework.read_text().split('\n\n')[1]
+    business_section = '## Business purpose and new decision analysis\n\n' + purpose + '\n\nThese aims do not establish realized savings or causal uplift. See the [business decision framework](../BUSINESS_DECISION_FRAMEWORK.md), [location research](LOCATION_RESEARCH_AND_SAFE_SOLUTION.md), and [item-level discount/profit scenarios](../item_discount_scenarios/REPORT.md). The forecast reference is full-list-price GP; unit lifts are assumptions, not guaranteed profit or validated location response.\n\n'
+    text = text.replace('## What changes in the project', business_section + '## What changes in the project', 1)
 step5 = R/'reports/activity/step5_tuesday_distribution.md'
 if step5.exists():
     anchor = "### Is 'people got paid' supported?"

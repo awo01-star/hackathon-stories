@@ -6,6 +6,32 @@ Team members: **TODO — add your team's names before submission.**
 
 The camera and offer planner are supporting prototypes. Their existence is not evidence of root cause or extra profit.
 
+## Business objective and how to use the evidence
+
+Our analysis goes beyond traditional exploratory data analysis and machine learning predictions by focusing on how Stories Coffee can make more profitable business decisions. Through a detailed investigation of transaction patterns, product costs, pricing strategies, and discount behavior, we identified specific opportunities for improving profitability and quantified their associated financial exposure. Rather than assuming that higher sales or more accurate predictions automatically translate into greater profits, we evaluated the financial implications of different business decisions and compared our approaches against simple baselines. We also developed a decision-support framework to assess how Stories Coffee could adapt its pricing, product selection, and operational strategies under both normal conditions and potential disruptions, including periods of conflict that may affect customer demand and operating costs. Although the estimated financial benefits require further validation through controlled experiments, our findings provide actionable recommendations that management can test before implementing changes. Ultimately, our objective is not simply to predict business performance, but to help Stories Coffee identify opportunities to increase gross profit, minimize avoidable losses, and strengthen its financial resilience during uncertain conditions.
+
+**Evidence boundary:** opportunities and exposure are not demonstrated additional profit. Observed accounting, estimated forecasts, hypothetical offer response and simulated disruptions are labelled separately. No causal effect of a discount, location or war is established by this transaction file.
+
+## Location research: why we did it and what management needs to verify
+
+The work/study hypothesis asks whether nearby institutions and visit purpose could explain demand and inform a profitable intervention. We searched public branch listings and found separate Bliss Street/AUB and LeMall Dbayeh contexts, but no verified mapping to Garden/Harbour/Uptown. A nearby institution is not proof of customer identity or Tuesday remote work. We preserve that missing link rather than assign invented locations to forecasts.
+
+Read the [sourced location investigation](reports/root_cause/LOCATION_RESEARCH_AND_SAFE_SOLUTION.md) and [Tuesday purpose check](reports/root_cause/TUESDAY_WORK_STUDY_HYPOTHESIS.md). Management should verify actual branch identity, public-location pins, customer visit purposes and offer eligibility. This matters because an offer aimed at an assumed audience can subsidize existing purchases or attract low-value, capacity-consuming visits. A controlled experiment should measure total GP after costs, not just sales or featured-item purchases.
+
+A location-aware **policy prototype** can suggest hypotheses (for example, university-related pre-order/study demand or mall staff pickup). It is not yet a trained location-response model. Such a model requires a verified branch crosswalk, more independent locations and exposure/response labels. No anonymous branch forecast is assigned to a public case.
+
+## Item-level forecasts, offers and profit-preservation thresholds
+
+[09_item_discount_business_value.ipynb](notebooks/09_item_discount_business_value.ipynb) shows historical unit counts, transaction counts, revenue, GP and GP/unit for all **135 branch/product combinations**. It combines the existing **July 1, 2026 historical forecast** with prices and recorded costs, then evaluates **4,860 explicitly hypothetical discount/quantity scenarios** without retraining. These are historical planning examples, not current forecasts.
+
+[Full report and formulas](reports/item_discount_scenarios/REPORT.md) · [Historical product counts/profit](reports/item_discount_scenarios/historical_product_economics.csv) · [Forecast reference](reports/item_discount_scenarios/forecast_reference.csv) · [All discount scenarios](reports/item_discount_scenarios/discount_scenarios.csv).
+
+For forecast Q, list price P, unit cost C, discount d and assumed unit lift u: reference `G0 = Q(P−C)`; scenario `G1 = Q(1+u)[P(1−d)−C]`. Required units are `G0/[P(1−d)−C]` when the denominator is positive. This reference is full-list-price/no-discount GP, not an estimate of the existing promotion policy. The notebook also shows the maximum discount compatible with an **assumed** unit lift and minimum whole units needed to preserve reference GP.
+
+For example, Garden Chicken Pesto Sandwich at 10% off needs **47.05% additional units** to preserve that reference; an assumed +20% volume would still lower GP. Harbour Iced Latte needs **16.54% additional units**. Neither response is predicted or guaranteed. Positive unit margin is insufficient to protect total GP. Real stockouts, waste, labor, implementation cost, cannibalization and forecast error can reverse a paper gain; a pilot must verify them before rollout. These scenarios must not be added to the separate bundle estimates below.
+
+Reproduce: `python3 src/item_discount_scenarios.py --data /path/to/stories_transactions.csv`; `python3 src/build_item_discount_notebook.py`.
+
 ## Main findings
 
 - **Harbour versus Garden:** of the observed $281.54/day gross-profit gap, a symmetric accounting decomposition allocates $145.58/day to transaction counts, $106.80/day to recorded unit costs and $33.59/day to prices, with small offsetting mix, basket-size and discount contributions. These are accounting contributions, not causal effects or recoverable savings.

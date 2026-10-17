@@ -1,0 +1,27 @@
+# Business decision framework: location context, forecasts and offers
+
+Our analysis goes beyond traditional exploratory data analysis and machine learning predictions by focusing on how Stories Coffee can make more profitable business decisions. Through a detailed investigation of transaction patterns, product costs, pricing strategies, and discount behavior, we identified specific opportunities for improving profitability and quantified their associated financial exposure. Rather than assuming that higher sales or more accurate predictions automatically translate into greater profits, we evaluated the financial implications of different business decisions and compared our approaches against simple baselines. We also developed a decision-support framework to assess how Stories Coffee could adapt its pricing, product selection, and operational strategies under both normal conditions and potential disruptions, including periods of conflict that may affect customer demand and operating costs. Although the estimated financial benefits require further validation through controlled experiments, our findings provide actionable recommendations that management can test before implementing changes. Ultimately, our objective is not simply to predict business performance, but to help Stories Coffee identify opportunities to increase gross profit, minimize avoidable losses, and strengthen its financial resilience during uncertain conditions.
+
+## Interpretation
+
+The paragraph states our business objective; it does not establish that any intervention has delivered extra profit. Financial exposure, historical gross profit, predicted demand and assumed incremental volume are distinct quantities. Normal-operation forecast evidence does not validate response to conflict. These distinctions must accompany the presentation, including annualized offer scenarios in other notebooks.
+
+## Why research location and customer purpose?
+
+A university, office or shopping context could suggest a customer need. However, identifying a nearby institution does not identify an actual buyer or explain Tuesday demand. Public research found separately named Bliss Street and LeMall Dbayeh cases; no verified crosswalk ties them to Garden, Harbour or Uptown. See [the sourced location report](root_cause/LOCATION_RESEARCH_AND_SAFE_SOLUTION.md) and [the Tuesday hypothesis check](root_cause/TUESDAY_WORK_STUDY_HYPOTHESIS.md). Never join public-place context to anonymous forecasts by guessing names, sales scale or margins.
+
+Management needs to validate branch identity and visit purpose because a poorly targeted offer can reduce total GP, crowd seating or subsidize purchases that would have happened anyway. Context rules can generate human-reviewed test candidates now. A trained location/offer-response model would require actual exposure, treatment/response and verified location data; three anonymous branches are insufficient for a convincing geographic generalization claim. No location-response model is trained in this extension.
+
+## How product forecasts inform discount decisions
+
+The [item-level report](item_discount_scenarios/REPORT.md) and [executed notebook](../notebooks/09_item_discount_business_value.ipynb) show the observed count and profit of each branch/product, saved baseline forecasts, and hypothetical price/quantity outcomes. The forecast is a July 1, 2026 historical example, not a live October forecast. Counts and recorded GP are historical; baseline demand is estimated; a discount-induced increase is an assumption until experimentally measured.
+
+The full-list-price reference is `Q × (P−C)`. A discount d with assumed unit lift u gives `Q × (1+u) × [P(1−d)−C]`. The required quantity is reference GP divided by discounted unit margin, provided that margin is positive. The maximum preserving discount under that assumed lift is `[(P−C)/P] × u/(1+u)`. Without extra units, a positive discount reduces this reference GP. A mathematical threshold does not guarantee attainable demand or actual GP.
+
+Examples at 10% off: Garden Chicken Pesto Sandwich requires 47.05% more units; Harbour Iced Latte requires 16.54%. These are accounting requirements, not estimated response rates. The scenarios apply discounts to all modeled units of an item, so their costs include subsidizing existing demand. Restricting offers to new add-ons would require a different eligibility and cannibalization analysis. No alternative scenario gains should be added together or to existing bundle forecasts.
+
+## What Stories should do before implementing
+
+Verify recorded versus avoidable costs and actual recipes/capacity. Choose a feasible offer only if its required extra volume is plausible, then randomize eligible opportunities before purchase against the existing policy. Record exposures, nonbuyers, complete baskets, extra service/waste/campaign costs and capacity displacement. Compare total GP per assigned eligible opportunity; do not rely only on higher unit counts, conversion among buyers or positive unit margin. Check whether any incremental benefit exceeds implementation and monitoring cost. Stop or retain the simpler policy when evidence does not support net value.
+
+No offers, prices, inventory or orders are activated. Source data and saved forecasts are unchanged, and no additional ML models are trained. This extension is evidence and decision-support analysis, with the missing information and required prospective validation made explicit.
