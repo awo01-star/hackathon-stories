@@ -1,0 +1,60 @@
+{
+  "source_sha256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "source_end": "2026-06-30",
+  "selected_method": "half_baseline_devwinner",
+  "selected_recipe": {
+    "baseline": 0.5,
+    "pooled_0_log90_halfall": 0.5
+  },
+  "baseline": {
+    "n": 90,
+    "actual_sum": 6906.0,
+    "wape": 0.09044435015518505,
+    "mae": 6.940096468574533,
+    "rmse": 8.858719392519694,
+    "bias": 0.004151516686560025
+  },
+  "selected": {
+    "n": 90,
+    "actual_sum": 6906.0,
+    "wape": 0.08827700273069736,
+    "mae": 6.773788676202177,
+    "rmse": 8.92235591838487,
+    "bias": -0.012519613645528792
+  },
+  "wape_reduction_percentage_points": 0.2167347424487695,
+  "better_in_june": true,
+  "relative_absolute_error_reduction": 0.02396332574416138,
+  "bootstrap95_wape_reduction": [
+    -0.0013340791488698441,
+    0.005930712455169044
+  ],
+  "dm": {
+    "selected": "selected",
+    "benchmark": "baseline",
+    "loss": "absolute_error",
+    "dates": 30,
+    "hac_lags": 6,
+    "mean_loss_reduction": 0.1663077923723573,
+    "dm_statistic": 1.2603212713355787,
+    "p_value_two_sided": 0.20755348952990305,
+    "interpretation": "Approximate normal DM/HAC; reused June, mixed weekly lead times and five issue blocks."
+  },
+  "june_previously_inspected": true,
+  "is_untouched_confirmatory_test": false,
+  "june_used_for_model_selection": false,
+  "forecast_horizon_days": 7,
+  "forecast_cadence": "weekly",
+  "target": "transactions_per_branch_day",
+  "does_not_evaluate_inventory_or_product_accuracy": true,
+  "next_forecast_origin": "2026-07-01",
+  "next_forecast_is_current_calendar_date": false,
+  "assumptions": [
+    "Branches may share weekday patterns and growth while differing in average traffic.",
+    "Prior strengths, recency and growth shapes are candidate hypotheses, not known business facts.",
+    "All fits exclude target-week sales. Completed earlier weeks may enter later training.",
+    "A short development/validation period can overfit model selection.",
+    "June has been repeatedly inspected. Confirm the frozen recipe on newly collected dates.",
+    "Lower transaction WAPE does not establish calibrated intervals or inventory savings."
+  ]
+}

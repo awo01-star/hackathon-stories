@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks_run": 20223,
+  "failures": [],
+  "cleanup_regression_reference": "not applicable to this source file",
+  "scope": "Source targets, selection, coefficients, blend weights, score arithmetic, issue cutoffs, bootstrap/DM and pre-cleanup prediction parity. No independent parameter optimization or prospective accuracy guarantee."
+}

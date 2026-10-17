@@ -204,6 +204,83 @@ Zone pricing and standard-cost allocation are normal accounting practice, so thi
 
 **Run notebooks 01, 06–08, 10 and 11:** put the CSV at `data/stories_transactions.csv` (ignored by git) or set `STORIES_DATA=/path/to/stories_transactions.csv`, then open the notebooks from the repository root or `notebooks/`. Notebook 10's Maven comparison needs the [Maven Roasters file](https://mavenanalytics.io/data-playground/coffee-shop-sales) at `data/Coffee Shop Sales.xlsx` (or `MAVEN_DATA`); it is skipped if missing. Figures are written to `figures/eda/`, `figures/bundle_offers/`, `figures/couple_offer/`, `figures/slow_seller_addons/`, `figures/data_fingerprints/` and `figures/garden_outlook/`.
 
+## Week-ahead demand planning (notebooks 12–13)
+
+These notebooks extend the next-day transaction models in notebook 03 to a
+different planning schedule: **predict each of the next seven days together,
+then refit weekly**. The intended use is a weekly staffing/preparation pilot.
+They complement the root-cause investigation, offer studies and Garden outlook.
+
+| Notebook | Purpose |
+|---|---|
+| [12_week_ahead_demand_forecasting.ipynb](notebooks/12_week_ahead_demand_forecasting.ipynb) | Train and compare branch/weekday/growth models; select a fixed blend using earlier validation; export seven daily forecasts per branch. |
+| [13_week_ahead_validation.ipynb](notebooks/13_week_ahead_validation.ipynb) | Independently audit calculations, compare a four-week seasonal-naive forecast, inspect branch/weekday errors, and reuse notebook 04's hypothetical preparation-cost framework. |
+
+### Historical forecasting results
+
+The selected forecast blends the original Poisson regression with a model that
+shares weekday patterns across branches and uses an alternative growth curve.
+March/April rolling origins shortlist candidates; May selects the recipe;
+June evaluates 90 matching branch-days. Each fit excludes its forecast dates.
+
+| Weekly-issued model | June WAPE | 100% − WAPE | June MAE |
+|---|---:|---:|---:|
+| Four-week seasonal naive | 9.89% | 90.11% | 7.59 |
+| Regression baseline | 9.04% | 90.96% | 6.94 |
+| Selected blend | **8.83%** | **91.17%** | **6.77** |
+
+The 91.17% score is an error shorthand, not the percentage of exactly correct
+predictions or a confidence level. The gain over regression is small and
+inconclusive: the descriptive 95% interval for WAPE reduction is −0.133 to
++0.593 percentage points (approximate DM/HAC p = 0.208), and RMSE is slightly
+worse. June was previously inspected, so this remains exploratory. Notebook
+03's next-day XGBoost uses a different information/refitting schedule; its score
+is context rather than a controlled comparison with this weekly forecast.
+
+### Does the more accurate forecast improve the decision?
+
+Notebook 13 reuses the team's existing accounting and loss helpers without
+rerunning or rewriting notebook 04's work. Jan–May branch economics price June
+shortages and excess capacity under all nine original penalty assumptions.
+The selected blend has lower assumed cost than the four-week naive forecast
+in **9/9 scenarios**, but the regression baseline has lower assumed cost than
+the blend in **8/9**. Integer and continuous capacity give the same win counts.
+These scenarios reuse the same errors; they are **not measured savings or
+independent experiments**. Lower WAPE alone does not justify deployment.
+
+**Recommended action:** retain the blend and regression baseline in a
+prospective pilot, freeze the rules before new sales arrive, and measure paid
+hours, service delays, availability and waste. Actual capacity, avoidable
+costs and lost sales are unknown; transaction forecasts do not specify SKU orders.
+
+### Run and inspect
+
+Install missing dependencies with
+`python -m pip install -r requirements-week-ahead.txt`; this supplements the
+team's existing requirements. Use the private CSV at
+`data/stories_transactions.csv`, set `STORIES_DATA`, or assign `DATA_OVERRIDE`
+in each notebook's setup cell. Run notebook **12**, then **13**, using
+**Restart Kernel and Run All**. Neither depends on variables from earlier notebooks.
+
+Missing branch-days stop fitting for investigation rather than being treated
+as zero. Distinct transaction IDs define traffic; duplicate lines remain in
+recorded financial totals. Customer IDs are not used as forecast inputs.
+
+[Full results and business interpretation](reports/week_ahead_forecasting/README.md)
+· [Forecast metrics](reports/week_ahead_forecasting/benchmark_metrics.csv)
+· [Decision-cost scenarios](reports/week_ahead_forecasting/decision_costs.csv)
+· [Calculation audit](reports/week_ahead_forecasting/validation.json).
+Aggregate evidence is under `reports/week_ahead_forecasting/`; detailed
+predictions and coefficients stay in ignored `artifacts/week_ahead_forecasting/`.
+The supplied file ends June 30, 2026, so its next forecast is July 1–7, a
+historical planning example rather than a current forecast.
+
+Verify the integration after both notebooks:
+
+```sh
+python src/verify_week_ahead.py --data /path/to/stories_transactions.csv
+```
+
 ## Reproduce the investigation
 
 Tested with the package versions in `requirements.txt`. For notebook generation/verification, also install `requirements-notebooks.txt`.

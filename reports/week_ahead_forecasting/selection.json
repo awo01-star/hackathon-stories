@@ -1,0 +1,104 @@
+{
+  "development_shortlist": [
+    "pooled_0_log90_halfall",
+    "pooled_0_log90_half56",
+    "pooled_0.05_log90_halfall"
+  ],
+  "validation_recipes": {
+    "baseline": {
+      "baseline": 1.0
+    },
+    "pooled_0_log90_halfall": {
+      "pooled_0_log90_halfall": 1.0
+    },
+    "pooled_0_log90_half56": {
+      "pooled_0_log90_half56": 1.0
+    },
+    "pooled_0.05_log90_halfall": {
+      "pooled_0.05_log90_halfall": 1.0
+    },
+    "half_baseline_devwinner": {
+      "baseline": 0.5,
+      "pooled_0_log90_halfall": 0.5
+    },
+    "average_devtop3": {
+      "pooled_0_log90_halfall": 0.3333333333333333,
+      "pooled_0_log90_half56": 0.3333333333333333,
+      "pooled_0.05_log90_halfall": 0.3333333333333333
+    }
+  },
+  "selected_method": "half_baseline_devwinner",
+  "selected_recipe": {
+    "baseline": 0.5,
+    "pooled_0_log90_halfall": 0.5
+  },
+  "selected_on": "May WAPE after March/April shortlist",
+  "validation_ranking": [
+    {
+      "stage": "validation",
+      "method": "half_baseline_devwinner",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.08291729948859407,
+      "mae": 5.800262521368795,
+      "rmse": 7.252683217751217,
+      "bias": -0.007210166425051493
+    },
+    {
+      "stage": "validation",
+      "method": "pooled_0_log90_halfall",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.0830137779957343,
+      "mae": 5.807011422653985,
+      "rmse": 7.255984829052654,
+      "bias": -0.02004792406140733
+    },
+    {
+      "stage": "validation",
+      "method": "pooled_0_log90_half56",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.0835653304486587,
+      "mae": 5.845593829956173,
+      "rmse": 7.3247024743922315,
+      "bias": -0.01600584986179492
+    },
+    {
+      "stage": "validation",
+      "method": "average_devtop3",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.08373773264813508,
+      "mae": 5.857653774290974,
+      "rmse": 7.328557960131105,
+      "bias": -0.018700891993413692
+    },
+    {
+      "stage": "validation",
+      "method": "pooled_0.05_log90_halfall",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.08493415507172608,
+      "mae": 5.941346371445981,
+      "rmse": 7.43747832390946,
+      "bias": -0.020048902057038673
+    },
+    {
+      "stage": "validation",
+      "method": "baseline",
+      "n": 84,
+      "actual_sum": 5876.0,
+      "wape": 0.08513876256988538,
+      "mae": 5.955659153102935,
+      "rmse": 7.412721865693922,
+      "bias": 0.005627591211304356
+    }
+  ],
+  "branches": [
+    "Garden",
+    "Harbour",
+    "Uptown"
+  ],
+  "protocol_sha256": "999cfe0553d52fe18722cfdaf11825758f8e3bce2c88e67850e9c0d89e74d25b"
+}

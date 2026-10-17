@@ -1,0 +1,213 @@
+{
+  "candidate_count": 25,
+  "new_candidate_count": 24,
+  "candidates": {
+    "baseline": {
+      "baseline": true
+    },
+    "pooled_0_linear_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0_linear_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0_log90_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "log90",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0_log90_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "log90",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0_quadratic": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "quadratic",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.05_linear_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.05,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.05_linear_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.05,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.05_log90_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.05,
+      "basis": "log90",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.05_log90_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.05,
+      "basis": "log90",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.05_quadratic": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.05,
+      "basis": "quadratic",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.15_linear_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.15_linear_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.15_log90_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "log90",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.15_log90_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "log90",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.15_quadratic": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "quadratic",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.4_linear_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.4,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.4_linear_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.4,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.4_log90_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.4,
+      "basis": "log90",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0.4_log90_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.4,
+      "basis": "log90",
+      "half_life_days": 56,
+      "weekday_trends": false
+    },
+    "pooled_0.4_quadratic": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.4,
+      "basis": "quadratic",
+      "half_life_days": null,
+      "weekday_trends": false
+    },
+    "pooled_0_weekdaygrowth_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": true
+    },
+    "pooled_0_weekdaygrowth_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.0,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": true
+    },
+    "pooled_0.15_weekdaygrowth_halfall": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "linear",
+      "half_life_days": null,
+      "weekday_trends": true
+    },
+    "pooled_0.15_weekdaygrowth_half56": {
+      "baseline": false,
+      "weekday_deviation_sd": 0.15,
+      "basis": "linear",
+      "half_life_days": 56,
+      "weekday_trends": true
+    }
+  },
+  "evaluation_periods": {
+    "development": [
+      "2026-03-02",
+      "2026-03-09",
+      "2026-03-16",
+      "2026-03-23",
+      "2026-03-30",
+      "2026-04-06",
+      "2026-04-13",
+      "2026-04-20"
+    ],
+    "validation": [
+      "2026-05-04",
+      "2026-05-11",
+      "2026-05-18",
+      "2026-05-25"
+    ],
+    "june": [
+      "2026-06-01",
+      "2026-06-08",
+      "2026-06-15",
+      "2026-06-22",
+      "2026-06-29"
+    ]
+  },
+  "primary_target": "Daily transactions per branch; seven-day forecast issued weekly",
+  "selection": "March/April top three; May minimum WAPE among those, baseline and two fixed blends",
+  "june_used_for_selection": false,
+  "june_previously_inspected": true,
+  "untouched_confirmatory_test": false,
+  "prior_assumptions": {
+    "branch_growth_basis_coefficient_deviation_sd": 0.15,
+    "quadratic_log_curvature_sd": 0.05,
+    "weekday_growth_sd": 0.05,
+    "log_age_offset_days": 90
+  }
+}

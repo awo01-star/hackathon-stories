@@ -1,0 +1,18 @@
+{
+  "source": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "cost_source": "8381e1489db61d9eabeb82d5c677ac9b602046f1fdb27a05c49e66aefcc20a1b",
+  "training_unchanged_by_cost_study": true,
+  "calibration_end": "2026-05-31",
+  "actual_savings_measured": false,
+  "selection_based_on_decision_costs": false,
+  "helpers": [
+    "forecast_business_value.transaction_economics",
+    "forecast_business_value.decision_loss"
+  ],
+  "runtime_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1"
+  }
+}
