@@ -66,7 +66,18 @@ def main():
     tc = d.groupby("Branch").size()
     out.append(f"- Garden transactions / Harbour transactions: {tc['Garden']/tc['Harbour']:.3f}")
 
-    # 5. Data quality
+    # 5. Uptown formulas, discounts and customer IDs (details in src/promo_audit.py)
+    u_cost = ((cost["Harbour"] * 0.96).round(2) == cost["Uptown"]).sum()
+    u_price = ((price["Harbour"] * 0.914 - price["Uptown"]).abs() <= 0.011).sum()
+    out.append(f"- Uptown cost == round(Harbour cost x 0.96, 2): {u_cost}/{n}; Uptown price within 1 cent of Harbour x 0.914: {u_price}/{n}")
+    c15 = df[df["Discount Rate"] == 0.15]
+    out.append(f"- 15% discount: {len(c15)} lines, branches {sorted(c15.Branch.unique())}, {c15.Date.nunique()} days, {c15.Product.nunique()} items, ${(c15.Quantity*c15['Unit Price (USD)']*0.15).sum():.0f} given away")
+    cu = df.dropna(subset=["Customer ID"]).drop_duplicates("Transaction ID").groupby("Customer ID").Branch.agg(["size", "nunique"])
+    out.append(f"- Customer visits variance/mean: {cu['size'].var()/cu['size'].mean():.2f}; IDs seen at 2+ branches: {(cu['nunique']>1).mean():.1%}")
+    sat = t[t.dow == 5].n.mean() / oth
+    out.append(f"- Saturday / (Mon,Wed,Thu,Fri) transactions per branch-day: {sat:.3f}")
+
+    # 6. Data quality
     out.append(f"- Rows {len(df)}, exact duplicate rows {df.duplicated().sum()}, missing Customer ID {df['Customer ID'].isna().sum()}")
     chk = (df["Quantity"] * df["Unit Price (USD)"] * (1 - df["Discount Rate"]) - df["Line Revenue (USD)"]).abs().max()
     out.append(f"- Max |qty*price*(1-disc) - line revenue|: {chk:.4f}")

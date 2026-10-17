@@ -313,6 +313,10 @@ python src/verify_root_cause.py --data /path/to/stories_transactions.csv
 
 The notebook builder executes cells in-process through IPython, embeds real outputs, and requires no notebook server. Set `STORIES_DATA` when opening/rerunning it against a different input location. Raw input is never bundled. Source fingerprint, model specification and detailed evidence are in [findings.json](reports/root_cause/findings.json). Daily panels, matched-product ratios, branch decompositions and calendar robustness CSVs are alongside it.
 
+## Discount audit (src/promo_audit.py)
+
+Earlier work called the 15% discount unidentifiable because it only ran at Harbour. That is wrong: it ran on 16 specific days, so the same nine items at Garden and Uptown on the same days are a control. Difference in differences gives **+6.1% units** (95% placebo range −9% to +25%) against a **+29% break-even**, so the campaign lost about $350 of gross profit and lost money with about 99% confidence. The 10% discount is a random per-line flag and cannot be used to learn price response. Full report: [reports/promo_audit/REPORT.md](reports/promo_audit/REPORT.md).
+
 ## Supporting work
 
 | Component | Evidence / setup | Role |
