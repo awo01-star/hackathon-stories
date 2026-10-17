@@ -1,0 +1,649 @@
+{
+  "step": 8,
+  "noRetraining": true,
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "predictionSHA256": "4ecc716f517426d57089d6c145eea337d9050bccb2fe60dc7cc925c639116f8f",
+  "lockedInputHashes": {
+    "stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+    "artifacts/daily_demand_models/test_predictions.csv": "4ecc716f517426d57089d6c145eea337d9050bccb2fe60dc7cc925c639116f8f",
+    "artifacts/daily_demand_models/best_model.joblib": "3de9a5a9473bd22a9ece035541b40a1c50f7b99d41efc7b0f2e60ed388b3be50",
+    "artifacts/daily_demand_models/random_forest.joblib": "159a026acdd939443f4af33a8e120eb39d5ab9766bdb98c385e582f06dcc7b0c",
+    "artifacts/daily_demand_models/xgboost.joblib": "8fcb24bc66814dd5953a1cee60914312a52d69fd648c7f5da5cad484708bfbbe",
+    "reports/demand_forecasting/selection_lock.json": "87757d9a088fbb6eb37e664e5dc3f09e4c158975a155785df526b880be79dbe1"
+  },
+  "branchDays": 90,
+  "dates": [
+    "2026-06-01",
+    "2026-06-30"
+  ],
+  "calibrationEnd": "2026-05-31",
+  "shortageFractionsOfGP": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "wasteFractionsOfRecordedInputCost": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "capacityRule": "nearest integer: floor(forecast + 0.5); continuous sensitivity also saved",
+  "economics": [
+    {
+      "Branch": "Garden",
+      "Transactions": 8912,
+      "RecordedGPUSD": 37379.76,
+      "RecordedRevenueUSD": 79613.19,
+      "RecordedInputCostUSD": 42233.43,
+      "Period": "Jan-May calibration",
+      "GPPerTransactionUSD": 4.194317773788151,
+      "InputCostPerTransactionUSD": 4.738939631956912
+    },
+    {
+      "Branch": "Harbour",
+      "Transactions": 12948,
+      "RecordedGPUSD": 77249.43,
+      "RecordedRevenueUSD": 118893.18,
+      "RecordedInputCostUSD": 41643.75,
+      "Period": "Jan-May calibration",
+      "GPPerTransactionUSD": 5.966128359592214,
+      "InputCostPerTransactionUSD": 3.2162303058387396
+    },
+    {
+      "Branch": "Uptown",
+      "Transactions": 5121,
+      "RecordedGPUSD": 28026.31,
+      "RecordedRevenueUSD": 44776.68,
+      "RecordedInputCostUSD": 16750.37,
+      "Period": "Jan-May calibration",
+      "GPPerTransactionUSD": 5.4728197617652805,
+      "InputCostPerTransactionUSD": 3.270917789494239
+    },
+    {
+      "Branch": "Garden",
+      "Transactions": 2251,
+      "RecordedGPUSD": 9414.73,
+      "RecordedRevenueUSD": 20135.36,
+      "RecordedInputCostUSD": 10720.63,
+      "Period": "June descriptive",
+      "GPPerTransactionUSD": 4.182465570857397,
+      "InputCostPerTransactionUSD": 4.762607729897823
+    },
+    {
+      "Branch": "Harbour",
+      "Transactions": 3386,
+      "RecordedGPUSD": 20504.51,
+      "RecordedRevenueUSD": 31590.4,
+      "RecordedInputCostUSD": 11085.89,
+      "Period": "June descriptive",
+      "GPPerTransactionUSD": 6.055673360897814,
+      "InputCostPerTransactionUSD": 3.274037212049616
+    },
+    {
+      "Branch": "Uptown",
+      "Transactions": 1269,
+      "RecordedGPUSD": 6855.75,
+      "RecordedRevenueUSD": 10916.33,
+      "RecordedInputCostUSD": 4060.58,
+      "Period": "June descriptive",
+      "GPPerTransactionUSD": 5.402482269503546,
+      "InputCostPerTransactionUSD": 3.199826635145784
+    },
+    {
+      "Branch": "Garden",
+      "Transactions": 11163,
+      "RecordedGPUSD": 46794.49,
+      "RecordedRevenueUSD": 99748.55,
+      "RecordedInputCostUSD": 52954.06,
+      "Period": "Jan-June descriptive",
+      "GPPerTransactionUSD": 4.191927797187136,
+      "InputCostPerTransactionUSD": 4.743712263728388
+    },
+    {
+      "Branch": "Harbour",
+      "Transactions": 16334,
+      "RecordedGPUSD": 97753.94,
+      "RecordedRevenueUSD": 150483.58,
+      "RecordedInputCostUSD": 52729.64,
+      "Period": "Jan-June descriptive",
+      "GPPerTransactionUSD": 5.984690828945758,
+      "InputCostPerTransactionUSD": 3.228213542304396
+    },
+    {
+      "Branch": "Uptown",
+      "Transactions": 6390,
+      "RecordedGPUSD": 34882.06,
+      "RecordedRevenueUSD": 55693.01,
+      "RecordedInputCostUSD": 20810.95,
+      "Period": "Jan-June descriptive",
+      "GPPerTransactionUSD": 5.4588513302034425,
+      "InputCostPerTransactionUSD": 3.256799687010955
+    }
+  ],
+  "comparisons": [
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.1",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 761.2539083983497,
+      "XGBoost": 837.3351290005454,
+      "XGBoostMinusNaiveUSD": 76.08122060219569,
+      "NaiveMinusXGBoostUSD": -76.08122060219569,
+      "XGBoostReductionFraction": -0.09994197699722525,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.25",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 991.6607125715201,
+      "XGBoost": 1017.7179881445974,
+      "XGBoostMinusNaiveUSD": 26.057275573077277,
+      "NaiveMinusXGBoostUSD": -26.057275573077277,
+      "XGBoostReductionFraction": -0.026276402042294266,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.5",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 1375.6720528601375,
+      "XGBoost": 1318.3560867180172,
+      "XGBoostMinusNaiveUSD": -57.31596614212026,
+      "NaiveMinusXGBoostUSD": 57.31596614212026,
+      "XGBoostReductionFraction": 0.041663975089815605,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.1",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 1368.9032806812525,
+      "XGBoost": 1554.4150185717228,
+      "XGBoostMinusNaiveUSD": 185.51173789047039,
+      "NaiveMinusXGBoostUSD": -185.51173789047039,
+      "XGBoostReductionFraction": -0.13551851362219547,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.25",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 1599.310084854423,
+      "XGBoost": 1734.7978777157748,
+      "XGBoostMinusNaiveUSD": 135.48779286135186,
+      "NaiveMinusXGBoostUSD": -135.48779286135186,
+      "XGBoostReductionFraction": -0.08471639999299112,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.5",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 1983.3214251430402,
+      "XGBoost": 2035.4359762891947,
+      "XGBoostMinusNaiveUSD": 52.114551146154554,
+      "NaiveMinusXGBoostUSD": -52.114551146154554,
+      "XGBoostReductionFraction": -0.026276402042294266,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.1",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 2584.2020252470584,
+      "XGBoost": 2988.5747977140777,
+      "XGBoostMinusNaiveUSD": 404.37277246701933,
+      "NaiveMinusXGBoostUSD": -404.37277246701933,
+      "XGBoostReductionFraction": -0.15647877701371274,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.25",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 2814.6088294202286,
+      "XGBoost": 3168.9576568581297,
+      "XGBoostMinusNaiveUSD": 354.34882743790104,
+      "NaiveMinusXGBoostUSD": -354.34882743790104,
+      "XGBoostReductionFraction": -0.12589629639969974,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.5",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 3198.620169708846,
+      "XGBoost": 3469.5957554315496,
+      "XGBoostMinusNaiveUSD": 270.9755857227037,
+      "NaiveMinusXGBoostUSD": -270.9755857227037,
+      "XGBoostReductionFraction": -0.08471639999299112,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.25_W0.1",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 232.26295421903052,
+      "XGBoost": 197.155875,
+      "XGBoostMinusNaiveUSD": -35.10707921903051,
+      "NaiveMinusXGBoostUSD": 35.10707921903051,
+      "XGBoostReductionFraction": 0.15115229777850644,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.25_W0.25",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 343.15414160682224,
+      "XGBoost": 315.1554718357271,
+      "XGBoostMinusNaiveUSD": -27.998669771095138,
+      "NaiveMinusXGBoostUSD": 27.998669771095138,
+      "XGBoostReductionFraction": 0.08159210796638247,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.25_W0.5",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 527.9727872531419,
+      "XGBoost": 511.82146656193896,
+      "XGBoostMinusNaiveUSD": -16.151320691202898,
+      "NaiveMinusXGBoostUSD": 16.151320691202898,
+      "XGBoostReductionFraction": 0.030591199170003785,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.5_W0.1",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 390.5984501795332,
+      "XGBoost": 315.6453521095153,
+      "XGBoostMinusNaiveUSD": -74.95309807001792,
+      "NaiveMinusXGBoostUSD": 74.95309807001792,
+      "XGBoostReductionFraction": 0.19189297355267734,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.5_W0.25",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 501.48963756732496,
+      "XGBoost": 433.6449489452424,
+      "XGBoostMinusNaiveUSD": -67.84468862208257,
+      "NaiveMinusXGBoostUSD": 67.84468862208257,
+      "XGBoostReductionFraction": 0.13528632206876742,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S0.5_W0.5",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 686.3082832136445,
+      "XGBoost": 630.3109436714542,
+      "XGBoostMinusNaiveUSD": -55.997339542190275,
+      "NaiveMinusXGBoostUSD": 55.997339542190275,
+      "XGBoostReductionFraction": 0.08159210796638247,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S1_W0.1",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 707.2694421005386,
+      "XGBoost": 552.6243063285458,
+      "XGBoostMinusNaiveUSD": -154.64513577199284,
+      "NaiveMinusXGBoostUSD": 154.64513577199284,
+      "XGBoostReductionFraction": 0.2186509504959073,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S1_W0.25",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 818.1606294883303,
+      "XGBoost": 670.6239031642729,
+      "XGBoostMinusNaiveUSD": -147.53672632405744,
+      "NaiveMinusXGBoostUSD": 147.53672632405744,
+      "XGBoostReductionFraction": 0.18032733549685162,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Garden",
+      "Scenario": "S1_W0.5",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 1002.9792751346499,
+      "XGBoost": 867.2898978904848,
+      "XGBoostMinusNaiveUSD": -135.68937724416514,
+      "NaiveMinusXGBoostUSD": 135.68937724416514,
+      "XGBoostReductionFraction": 0.13528632206876742,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.25_W0.1",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 334.1794097544022,
+      "XGBoost": 454.9132089898053,
+      "XGBoostMinusNaiveUSD": 120.73379923540313,
+      "NaiveMinusXGBoostUSD": -120.73379923540313,
+      "XGBoostReductionFraction": -0.36128437513290773,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.25_W0.25",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 403.64998436051894,
+      "XGBoost": 479.5173708294717,
+      "XGBoostMinusNaiveUSD": 75.86738646895276,
+      "NaiveMinusXGBoostUSD": -75.86738646895276,
+      "XGBoostReductionFraction": -0.18795339875745418,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.25_W0.5",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 519.4342753707135,
+      "XGBoost": 520.5243072289156,
+      "XGBoostMinusNaiveUSD": 1.09003185820211,
+      "NaiveMinusXGBoostUSD": -1.09003185820211,
+      "XGBoostReductionFraction": -0.0020984981351570772,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.5_W0.1",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 622.0451031047265,
+      "XGBoost": 893.4236434198331,
+      "XGBoostMinusNaiveUSD": 271.37854031510653,
+      "NaiveMinusXGBoostUSD": -271.37854031510653,
+      "XGBoostReductionFraction": -0.43626826890946147,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.5_W0.25",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 691.5156777108433,
+      "XGBoost": 918.0278052594995,
+      "XGBoostMinusNaiveUSD": 226.51212754865617,
+      "NaiveMinusXGBoostUSD": -226.51212754865617,
+      "XGBoostReductionFraction": -0.32755891854612734,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S0.5_W0.5",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 807.2999687210379,
+      "XGBoost": 959.0347416589434,
+      "XGBoostMinusNaiveUSD": 151.73477293790552,
+      "NaiveMinusXGBoostUSD": -151.73477293790552,
+      "XGBoostReductionFraction": -0.18795339875745418,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S1_W0.1",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 1197.7764898053751,
+      "XGBoost": 1770.4445122798886,
+      "XGBoostMinusNaiveUSD": 572.6680224745135,
+      "NaiveMinusXGBoostUSD": -572.6680224745135,
+      "XGBoostReductionFraction": -0.47810925272674654,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S1_W0.25",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 1267.247064411492,
+      "XGBoost": 1795.048674119555,
+      "XGBoostMinusNaiveUSD": 527.8016097080631,
+      "NaiveMinusXGBoostUSD": -527.8016097080631,
+      "XGBoostReductionFraction": -0.4164946398618596,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Harbour",
+      "Scenario": "S1_W0.5",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 1383.0313554216866,
+      "XGBoost": 1836.055610518999,
+      "XGBoostMinusNaiveUSD": 453.02425509731233,
+      "NaiveMinusXGBoostUSD": -453.02425509731233,
+      "XGBoostReductionFraction": -0.32755891854612734,
+      "Winner": "Seasonal naive"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.25_W0.1",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 194.81154442491703,
+      "XGBoost": 185.2660450107401,
+      "XGBoostMinusNaiveUSD": -9.54549941417693,
+      "NaiveMinusXGBoostUSD": 9.54549941417693,
+      "XGBoostReductionFraction": 0.0489986332296436,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.25_W0.25",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 244.85658660417886,
+      "XGBoost": 223.04514547939854,
+      "XGBoostMinusNaiveUSD": -21.811441124780316,
+      "NaiveMinusXGBoostUSD": 21.811441124780316,
+      "XGBoostReductionFraction": 0.08907843332815647,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.25_W0.5",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 328.26499023628196,
+      "XGBoost": 286.01031292716266,
+      "XGBoostMinusNaiveUSD": -42.2546773091193,
+      "NaiveMinusXGBoostUSD": 42.2546773091193,
+      "XGBoostReductionFraction": 0.12872124218517728,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.5_W0.1",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 356.2597273969928,
+      "XGBoost": 345.34602304237455,
+      "XGBoostMinusNaiveUSD": -10.913704354618233,
+      "NaiveMinusXGBoostUSD": 10.913704354618233,
+      "XGBoostReductionFraction": 0.030634123127974852,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.5_W0.25",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 406.30476957625467,
+      "XGBoost": 383.125123511033,
+      "XGBoostMinusNaiveUSD": -23.179646065221675,
+      "NaiveMinusXGBoostUSD": 23.179646065221675,
+      "XGBoostReductionFraction": 0.05704989899428526,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S0.5_W0.5",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 489.7131732083577,
+      "XGBoost": 446.0902909587971,
+      "XGBoostMinusNaiveUSD": -43.62288224956063,
+      "NaiveMinusXGBoostUSD": 43.62288224956063,
+      "XGBoostReductionFraction": 0.08907843332815647,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S1_W0.1",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.1,
+      "Oracle": 0.0,
+      "Seasonal naive": 679.1560933411444,
+      "XGBoost": 665.5059791056434,
+      "XGBoostMinusNaiveUSD": -13.65011423550095,
+      "NaiveMinusXGBoostUSD": 13.65011423550095,
+      "XGBoostReductionFraction": 0.020098640606091733,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S1_W0.25",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.25,
+      "Oracle": 0.0,
+      "Seasonal naive": 729.2011355204062,
+      "XGBoost": 703.2850795743019,
+      "XGBoostMinusNaiveUSD": -25.91605594610428,
+      "NaiveMinusXGBoostUSD": 25.91605594610428,
+      "XGBoostReductionFraction": 0.035540339535550594,
+      "Winner": "XGBoost"
+    },
+    {
+      "Branch": "Uptown",
+      "Scenario": "S1_W0.5",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.5,
+      "Oracle": 0.0,
+      "Seasonal naive": 812.6095391525093,
+      "XGBoost": 766.250247022066,
+      "XGBoostMinusNaiveUSD": -46.35929213044335,
+      "NaiveMinusXGBoostUSD": 46.35929213044335,
+      "XGBoostReductionFraction": 0.05704989899428526,
+      "Winner": "XGBoost"
+    }
+  ],
+  "wins": [
+    {
+      "Branch": "ALL",
+      "Winner": "Seasonal naive",
+      "scenarios": 8
+    },
+    {
+      "Branch": "ALL",
+      "Winner": "XGBoost",
+      "scenarios": 1
+    },
+    {
+      "Branch": "Garden",
+      "Winner": "XGBoost",
+      "scenarios": 9
+    },
+    {
+      "Branch": "Harbour",
+      "Winner": "Seasonal naive",
+      "scenarios": 9
+    },
+    {
+      "Branch": "Uptown",
+      "Winner": "XGBoost",
+      "scenarios": 9
+    }
+  ],
+  "continuousWins": [
+    {
+      "Branch": "ALL",
+      "Winner": "Seasonal naive",
+      "scenarios": 8
+    },
+    {
+      "Branch": "ALL",
+      "Winner": "XGBoost",
+      "scenarios": 1
+    },
+    {
+      "Branch": "Garden",
+      "Winner": "XGBoost",
+      "scenarios": 9
+    },
+    {
+      "Branch": "Harbour",
+      "Winner": "Seasonal naive",
+      "scenarios": 9
+    },
+    {
+      "Branch": "Uptown",
+      "Winner": "XGBoost",
+      "scenarios": 9
+    }
+  ],
+  "actualSavingsMeasured": false,
+  "oracleCostZeroByConstruction": true
+}

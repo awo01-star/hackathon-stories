@@ -1,0 +1,197 @@
+{
+  "validation": {
+    "Seasonal naive": {
+      "MAE": 8.935483870967742,
+      "RMSE": 12.331880181756725,
+      "WAPE": 0.12905730703525392
+    },
+    "Random Forest": {
+      "MAE": 9.19872057625117,
+      "RMSE": 13.151363952816252,
+      "WAPE": 0.13285929703235888
+    },
+    "XGBoost": {
+      "MAE": 8.252264063845399,
+      "RMSE": 12.43378594488126,
+      "WAPE": 0.11918940176077374
+    }
+  },
+  "test": {
+    "Seasonal naive": {
+      "MAE": 9.6,
+      "RMSE": 11.611297180858916,
+      "WAPE": 0.12510860121633363
+    },
+    "Random Forest": {
+      "MAE": 10.052063316107683,
+      "RMSE": 13.493360543862485,
+      "WAPE": 0.13099995633502629
+    },
+    "XGBoost": {
+      "MAE": 9.101533614264595,
+      "RMSE": 12.278624031544897,
+      "WAPE": 0.11861251452125883
+    }
+  },
+  "selectedByValidation": "XGBoost",
+  "selectedSettings": {
+    "Random Forest": {
+      "trial": 0,
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "min_samples_leaf": 2,
+        "max_features": 1.0
+      }
+    },
+    "XGBoost": {
+      "trial": 1,
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    }
+  },
+  "splitObservations": {
+    "train": 339,
+    "validation": 93,
+    "test": 90
+  },
+  "perBranch": {
+    "validation": {
+      "Harbour": {
+        "Seasonal naive": {
+          "MAE": 12.258064516129032,
+          "RMSE": 16.875253881005378,
+          "WAPE": 0.12218649517684887
+        },
+        "Random Forest": {
+          "MAE": 12.290045790824534,
+          "RMSE": 17.65475406780998,
+          "WAPE": 0.12250527958699696
+        },
+        "XGBoost": {
+          "MAE": 12.158638861871534,
+          "RMSE": 17.82697818963981,
+          "WAPE": 0.12119543560064874
+        }
+      },
+      "Garden": {
+        "Seasonal naive": {
+          "MAE": 7.290322580645161,
+          "RMSE": 9.193265417263774,
+          "WAPE": 0.106203007518797
+        },
+        "Random Forest": {
+          "MAE": 9.182405330808692,
+          "RMSE": 11.64532735452907,
+          "WAPE": 0.13376624307099128
+        },
+        "XGBoost": {
+          "MAE": 6.550728705621535,
+          "RMSE": 8.737524639775806,
+          "WAPE": 0.09542884862512574
+        }
+      },
+      "Uptown": {
+        "Seasonal naive": {
+          "MAE": 7.258064516129032,
+          "RMSE": 9.323919984157293,
+          "WAPE": 0.18734388009991673
+        },
+        "Random Forest": {
+          "MAE": 6.123710607120279,
+          "RMSE": 8.459972285374711,
+          "WAPE": 0.15806413723624368
+        },
+        "XGBoost": {
+          "MAE": 6.047424624043126,
+          "RMSE": 8.345754044111136,
+          "WAPE": 0.1560950569070249
+        }
+      }
+    },
+    "test": {
+      "Harbour": {
+        "Seasonal naive": {
+          "MAE": 11.233333333333333,
+          "RMSE": 13.826303434637426,
+          "WAPE": 0.09952746603662138
+        },
+        "Random Forest": {
+          "MAE": 13.117894565512765,
+          "RMSE": 18.062446166913254,
+          "WAPE": 0.11622470081671087
+        },
+        "XGBoost": {
+          "MAE": 11.480457051595051,
+          "RMSE": 16.111480260568097,
+          "WAPE": 0.10171698509977896
+        }
+      },
+      "Garden": {
+        "Seasonal naive": {
+          "MAE": 10.233333333333333,
+          "RMSE": 11.825114516711174,
+          "WAPE": 0.13638382940915147
+        },
+        "Random Forest": {
+          "MAE": 10.171450199284951,
+          "RMSE": 12.159549846529401,
+          "WAPE": 0.13555908750712953
+        },
+        "XGBoost": {
+          "MAE": 9.31531359354655,
+          "RMSE": 11.25449035283258,
+          "WAPE": 0.12414900391221523
+        }
+      },
+      "Uptown": {
+        "Seasonal naive": {
+          "MAE": 7.333333333333333,
+          "RMSE": 8.57126983980009,
+          "WAPE": 0.17336485421591805
+        },
+        "Random Forest": {
+          "MAE": 6.8668451835253315,
+          "RMSE": 8.491508835131846,
+          "WAPE": 0.16233676556797474
+        },
+        "XGBoost": {
+          "MAE": 6.508830197652181,
+          "RMSE": 8.127144334599855,
+          "WAPE": 0.15387305431801845
+        }
+      }
+    }
+  },
+  "protocol": "Refit each selected ML configuration and preprocessing on Jan 8\u2013May 31 before June scoring. Never fit on June.",
+  "holdoutQualification": "June was inspected in earlier project work. This new run excludes June from tuning, but is an internal chronological holdout, not an untouched external benchmark.",
+  "metricsDefinition": {
+    "MAE": "Average absolute error, transactions per branch-day",
+    "RMSE": "Square root of average squared error, transactions per branch-day",
+    "WAPE": "Sum of absolute errors / sum of actual transaction counts; stored as fraction"
+  },
+  "rounding": "Predictions remain nonnegative continuous expected counts; no post-test calibration or rounding.",
+  "lowestJuneMAE": "XGBoost",
+  "JuneMAEReductionVsNaive": {
+    "Seasonal naive": 0.0,
+    "Random Forest": -0.04708992876121698,
+    "XGBoost": 0.05192358184743806
+  },
+  "selectedVsNaivePairedDayBootstrap": {
+    "replicates": 1000,
+    "metric": "Naive MAE minus validation-selected model MAE; positive favors selected",
+    "ci95": [
+      -0.72941108862559,
+      1.8134203820758394
+    ],
+    "limitation": "30 June dates; assumes date clusters sufficiently independent. Cross-day serial dependence may remain."
+  },
+  "featureCSV_SHA256": "93b82f298a68374b17e28b9e54f2d4ea220a480315a18167b69660a976e5a5ff"
+}

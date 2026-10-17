@@ -1,0 +1,18 @@
+{
+  "selectedByValidation": "XGBoost",
+  "features": [
+    "Branch",
+    "DayOfWeek",
+    "Month",
+    "DayOfMonth",
+    "Weekend",
+    "Lag1",
+    "Lag7",
+    "RollingMean7"
+  ],
+  "fitThrough": "2026-05-31",
+  "fitStart": "2026-01-08",
+  "predictionRule": "Use pipeline.predict(features), clipped at zero",
+  "oneDayAheadOnly": true,
+  "selectionLock": "selection_lock.json"
+}

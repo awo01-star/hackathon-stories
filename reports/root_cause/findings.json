@@ -1,0 +1,257 @@
+{
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "basis": "Original rows retained; removal of exact duplicates reported only as sensitivity. Same-product repeated lines might be genuine purchases.",
+  "notebookReview": {
+    "source": "01_eda.ipynb (user-supplied, read-only)",
+    "duplicateAssumption": "Notebook drops 132 exact duplicates; source cannot prove they are export errors. We preserve raw rows and report both.",
+    "customerInference": "Similar branch-choice statistics do not prove replacement customer IDs are invalid or establish a closed customer base. First-observed is not first-ever; anonymous may mean capture failure rather than nonmember.",
+    "causality": "Similar Tuesday basket/customer shares do not prove the same individuals visit or reveal payday motivation."
+  },
+  "tuesdayControlled": {
+    "observations": 525,
+    "weekClusters": 25,
+    "tuesdayRatioVsGeometricMeanOtherDays": 1.6589171299977892,
+    "ci95": [
+      1.6017268813855146,
+      1.7181493775140873
+    ],
+    "specification": "log daily transactions ~ branch\u00d7week fixed effects + weekday + calendar proxies days1\u20133,14\u201316,25\u2013end. SE clustered by week. Calendar windows are hypothetical, not actual paydays. Exploratory specification.",
+    "calendarProxyRatios": {
+      "first3": {
+        "ratio": 1.0368987304887862,
+        "ci95": [
+          0.9868295494939114,
+          1.0895082923293533
+        ]
+      },
+      "mid3": {
+        "ratio": 0.9951338475467623,
+        "ci95": [
+          0.9446433236557004,
+          1.048323054569282
+        ]
+      },
+      "end7": {
+        "ratio": 0.988489618969707,
+        "ci95": [
+          0.9212041016417428,
+          1.0606897267060542
+        ]
+      }
+    }
+  },
+  "weeklyTuesday": {
+    "fullWeeks": 25,
+    "tuesdayWins": 25,
+    "ratioRange": [
+      1.444343891402715,
+      1.812807881773399
+    ],
+    "medianRatio": 1.6115942028985508
+  },
+  "tuesdayHourRatioRange": [
+    1.4341672577213231,
+    1.8865628042843232
+  ],
+  "tuesdayBasketComparisons": {
+    "Tuesday": {
+      "transactionsPerDate": 284.53846153846155,
+      "ticket": 9.028037307380373,
+      "unitsPerBasket": 1.5917815625844822,
+      "discountedBasketShare": 0.10083806434171398,
+      "identifiedBasketShare": 0.6416599080832658,
+      "takeawayShare": 0.41659908083265745
+    },
+    "OtherDays": {
+      "transactionsPerDate": 170.8967741935484,
+      "ticket": 9.027736796406055,
+      "unitsPerBasket": 1.5973045415077958,
+      "discountedBasketShare": 0.09441655026614822,
+      "identifiedBasketShare": 0.6337347578240025,
+      "takeawayShare": 0.4066593680395636
+    }
+  },
+  "tuesdayExcluding15PercentDates": {
+    "observations": 477,
+    "weekClusters": 25,
+    "tuesdayRatioVsGeometricMeanOtherDays": 1.6477031672793003,
+    "ci95": [
+      1.5880306158286186,
+      1.70961800131644
+    ],
+    "specification": "log daily transactions ~ branch\u00d7week fixed effects + weekday + calendar proxies days1\u20133,14\u201316,25\u2013end. SE clustered by week. Calendar windows are hypothetical, not actual paydays. Exploratory specification.",
+    "calendarProxyRatios": {
+      "first3": {
+        "ratio": 1.0379342787770163,
+        "ci95": [
+          0.9903150695915695,
+          1.0878432532635027
+        ]
+      },
+      "mid3": {
+        "ratio": 1.0101222689395861,
+        "ci95": [
+          0.9533066007078341,
+          1.0703240672518637
+        ]
+      },
+      "end7": {
+        "ratio": 0.9871837285037162,
+        "ci95": [
+          0.9218646232608938,
+          1.0571310463951926
+        ]
+      }
+    }
+  },
+  "excludedCampaignDates": 16,
+  "tuesdayCategoryTotalVariation": 0.011530562977378695,
+  "branchDecomposition": {
+    "dailyGP": {
+      "Garden": 258.5330939226519,
+      "Harbour": 540.0770165745856,
+      "Uptown": 192.7185635359116
+    },
+    "effects": [
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "transactions_per_day",
+        "dailyGrossProfitDifference": 145.57628731968853,
+        "sixMonthAccountingDifference": 26349.308004863626
+      },
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "units_per_basket",
+        "dailyGrossProfitDifference": -0.010832299571434115,
+        "sixMonthAccountingDifference": -1.9606462224295749
+      },
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "product_mix",
+        "dailyGrossProfitDifference": -2.2217973110062608,
+        "sixMonthAccountingDifference": -402.1453132921332
+      },
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "unit_prices",
+        "dailyGrossProfitDifference": 33.59383529371185,
+        "sixMonthAccountingDifference": 6080.484188161845
+      },
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "unit_costs",
+        "dailyGrossProfitDifference": 106.80061774017415,
+        "sixMonthAccountingDifference": 19330.91181097152
+      },
+      {
+        "comparison": "Garden to Harbour",
+        "factor": "discounts",
+        "dailyGrossProfitDifference": -2.1941880910631775,
+        "sixMonthAccountingDifference": -397.1480444824351
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "transactions_per_day",
+        "dailyGrossProfitDifference": 314.56665139732894,
+        "sixMonthAccountingDifference": 56936.56390291654
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "units_per_basket",
+        "dailyGrossProfitDifference": 1.6622406079085472,
+        "sixMonthAccountingDifference": 300.86555003144707
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "product_mix",
+        "dailyGrossProfitDifference": -9.419640732352764,
+        "sixMonthAccountingDifference": -1704.9549725558504
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "unit_prices",
+        "dailyGrossProfitDifference": 50.38383726246697,
+        "sixMonthAccountingDifference": 9119.474544506522
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "unit_costs",
+        "dailyGrossProfitDifference": -8.329727776873906,
+        "sixMonthAccountingDifference": -1507.680727614177
+      },
+      {
+        "comparison": "Uptown to Harbour",
+        "factor": "discounts",
+        "dailyGrossProfitDifference": -1.5049077198037402,
+        "sixMonthAccountingDifference": -272.38829728447695
+      }
+    ],
+    "interpretation": "Exact observed profit identity decomposition; volume, basket size and mix are accounting factors, not identified behavioral causes or recoverable savings."
+  },
+  "gardenDecision": {
+    "sixMonthRecordedCostGapAtHarbourCosts": 15923.470000000001,
+    "sameVolumePriceDifferenceAtHarbourPrices": 4985.112999999999,
+    "recordedGP": 46794.490000000005,
+    "recordedRevenue": 99748.55,
+    "uniformVolumeLossBreakEvenForPriceAlignment": 0.09627561261912339,
+    "costRecoveryScenarios": {
+      "0.1": 1592.3470000000002,
+      "0.25": 3980.8675000000003,
+      "0.5": 7961.735000000001
+    },
+    "interpretation": "Fixed-volume accounting scenarios, not achievable savings or a safe pricing recommendation. Uniform volume response and fixed mix assumed; elasticity unobserved."
+  },
+  "gardenRatios": {
+    "priceGardenHarbour": {
+      "min": 0.951219512195122,
+      "median": 0.9525756336876533,
+      "max": 0.9532374100719425
+    },
+    "costGardenHarbour": {
+      "min": 1.4260869565217391,
+      "median": 1.430232558139535,
+      "max": 1.4385964912280702
+    }
+  },
+  "growthAccounting": {
+    "January": {
+      "transactionsPerDay": 146.61290322580646,
+      "unitsPerBasket": 1.5911991199119913,
+      "netRevenuePerUnit": 5.6893763827433625
+    },
+    "June": {
+      "transactionsPerDay": 230.2,
+      "unitsPerBasket": 1.5944106573993628,
+      "netRevenuePerUnit": 5.689046408137317
+    },
+    "revenuePerDayJanuary": 1327.2764516129032,
+    "revenuePerDayJune": 2088.0696666666663,
+    "effectsRevenuePerDay": {
+      "transactionsPerDay": 757.4498573826754,
+      "unitsPerBasket": 3.4423886887837702,
+      "netRevenuePerUnit": -0.09903101769604443
+    },
+    "interpretation": "More transactions is observed; increased footfall, conversion and marketing acquisition cannot be separated without visit/exposure records."
+  },
+  "identifiedGrowth": {
+    "2026-01": {
+      "identifiedTransactions": 2871,
+      "januaryObservedCohortTransactions": 2871,
+      "januaryObservedCohortActiveCustomers": 1979,
+      "januaryObservedCohortRevenue": 26087.54,
+      "allIdentifiedRevenue": 26087.54
+    },
+    "2026-06": {
+      "identifiedTransactions": 4412,
+      "januaryObservedCohortTransactions": 2469,
+      "januaryObservedCohortActiveCustomers": 1400,
+      "januaryObservedCohortRevenue": 22239.78,
+      "allIdentifiedRevenue": 39935.13
+    }
+  },
+  "duplicateSensitivity": {
+    "removedRows": 132,
+    "revenueDifference": 741.429999999993,
+    "gardenCostGapDeduplicated": 15887.5
+  }
+}

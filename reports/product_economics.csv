@@ -1,0 +1,136 @@
+Branch,Product,quantity,revenue,gross_profit
+Garden,Almond Croissant,377,1818.1699999999998,788.96
+Garden,Americano,341,1069.49,718.26
+Garden,Avocado Toast,305,2860.43,1036.53
+Garden,Banana Bread,416,1839.51,903.5100000000001
+Garden,Blueberry Muffin,319,1253.79,657.26
+Garden,Brownie,554,2834.71,956.65
+Garden,Butter Croissant,687,2495.73,1375.92
+Garden,Cappuccino,517,2084.02,1256.8200000000002
+Garden,Caramel Latte,370,2111.52,1123.6200000000001
+Garden,Chai Latte,382,1997.17,1187.33
+Garden,Cheesecake Slice,465,3118.64,1072.64
+Garden,Chicken Pesto Sandwich,354,3779.81,1163.75
+Garden,Chicken Salad Bowl,179,2216.0499999999997,769.73
+Garden,Chocolate Cookie,537,1684.4199999999998,986.32
+Garden,Chocolate Croissant,514,2170.33,1008.6899999999999
+Garden,Cinnamon Roll,457,2343.34,880.9399999999999
+Garden,Classic Matcha,650,4170.08,2057.58
+Garden,Coffee Frappe,322,2101.94,936.3000000000001
+Garden,Cold Brew,461,2361.9100000000003,1596.65
+Garden,Egg Sandwich,346,2806.92,1267.22
+Garden,English Breakfast Tea,135,462.33000000000004,351.63
+Garden,Espresso,213,562.02,363.93
+Garden,Flat White,445,1924.31,1136.66
+Garden,Fresh Orange Juice,337,1924.62,903.5100000000001
+Garden,Frozen Yoghurt Cup,485,2968.11,1100.86
+Garden,Granola Yoghurt,188,1469.48,576.48
+Garden,Halloumi Wrap,288,2852.71,1147.75
+Garden,Iced Americano,508,1944.39,1319.55
+Garden,Iced Latte,814,4323.099999999999,2393.92
+Garden,Iced Matcha,766,5218.16,2468.22
+Garden,Iced Mocha,362,2251.18,1096.4
+Garden,Lemonade,357,1651.3000000000002,1055.11
+Garden,Mint Tea,196,709.86,533.46
+Garden,Peach Iced Tea,411,1822.2,1148.16
+Garden,Pistachio Cookie,418,1434.28,727.86
+Garden,Quinoa Bowl,172,1994.52,783.6400000000001
+Garden,Soup of the Day,149,1061.8,467.29
+Garden,Spanish Latte,412,2435.4700000000003,1269.51
+Garden,Sparkling Water,336,918.33,269.84999999999997
+Garden,Still Water,368,713.42,371.18
+Garden,Strawberry Matcha,480,3654.51,1470.51
+Garden,Tiramisu Cup,452,2942.36,1098.2
+Garden,Tuna Sandwich,211,1856.6899999999998,732.06
+Garden,Turkey & Cheese Sandwich,317,3041.6,901.85
+Garden,Vanilla Latte,460,2493.82,1362.22
+Harbour,Almond Croissant,618,3132.36,1951.98
+Harbour,Americano,566,1859.27,1451.75
+Harbour,Avocado Toast,425,4194.22,2417.7200000000003
+Harbour,Banana Bread,624,2900.0,1920.3200000000002
+Harbour,Blueberry Muffin,461,1902.89,1298.98
+Harbour,Brownie,587,3114.11,1722.92
+Harbour,Butter Croissant,1157,4403.13,3084.15
+Harbour,Cappuccino,840,3552.8,2612.0
+Harbour,Caramel Latte,515,3092.0,2128.95
+Harbour,Chai Latte,518,2832.73,2066.09
+Harbour,Cheesecake Slice,561,3896.42,2168.54
+Harbour,Chicken Pesto Sandwich,489,5493.69,2965.56
+Harbour,Chicken Salad Bowl,262,3402.07,1921.77
+Harbour,Chocolate Cookie,802,2641.75,1911.9299999999998
+Harbour,Chocolate Croissant,758,3359.58,2161.94
+Harbour,Cinnamon Roll,777,4183.59,2443.11
+Harbour,Classic Matcha,964,6487.54,4299.26
+Harbour,Coffee Frappe,458,3103.58,1944.84
+Harbour,Cold Brew,773,4109.03,3212.35
+Harbour,Egg Sandwich,465,3958.0400000000004,2511.89
+Harbour,English Breakfast Tea,258,930.0,782.9399999999999
+Harbour,Espresso,350,964.8799999999999,737.38
+Harbour,Flat White,656,2975.4300000000003,2161.9900000000002
+Harbour,Fresh Orange Juice,486,2918.02,1887.7
+Harbour,Frozen Yoghurt Cup,456,2887.16,1660.52
+Harbour,Granola Yoghurt,281,2304.78,1371.86
+Harbour,Halloumi Wrap,408,4242.61,2553.49
+Harbour,Iced Americano,767,3037.75,2378.13
+Harbour,Iced Latte,1344,7404.7300000000005,5173.69
+Harbour,Iced Matcha,1121,8012.47,5198.759999999999
+Harbour,Iced Mocha,535,3446.6699999999996,2253.62
+Harbour,Lemonade,501,2431.65,1845.48
+Harbour,Mint Tea,321,1221.45,1019.22
+Harbour,Peach Iced Tea,541,2517.08,1894.93
+Harbour,Pistachio Cookie,651,2340.78,1572.6
+Harbour,Quinoa Bowl,218,2662.48,1589.9199999999998
+Harbour,Soup of the Day,226,1692.76,1062.22
+Harbour,Spanish Latte,613,3808.57,2594.83
+Harbour,Sparkling Water,521,1494.38,791.03
+Harbour,Still Water,577,1177.1899999999998,802.14
+Harbour,Strawberry Matcha,725,5786.54,3481.04
+Harbour,Tiramisu Cup,419,2834.2599999999998,1640.1100000000001
+Harbour,Tuna Sandwich,329,3042.4599999999996,1815.29
+Harbour,Turkey & Cheese Sandwich,477,4798.660000000001,2547.2200000000003
+Harbour,Vanilla Latte,692,3932.02,2741.78
+Uptown,Almond Croissant,189,877.9200000000001,532.05
+Uptown,Americano,218,655.36,504.94
+Uptown,Avocado Toast,175,1571.8,870.05
+Uptown,Banana Bread,218,925.2799999999999,596.0999999999999
+Uptown,Blueberry Muffin,150,565.84,376.84
+Uptown,Brownie,180,884.3000000000001,473.90000000000003
+Uptown,Butter Croissant,394,1372.0,942.5400000000001
+Uptown,Cappuccino,324,1249.44,899.52
+Uptown,Caramel Latte,214,1179.08,793.88
+Uptown,Chai Latte,223,1117.92,801.26
+Uptown,Cheesecake Slice,190,1225.3500000000001,662.95
+Uptown,Chicken Pesto Sandwich,303,3110.48,1607.6000000000001
+Uptown,Chicken Salad Bowl,111,1324.07,722.45
+Uptown,Chocolate Cookie,328,985.16,699.8
+Uptown,Chocolate Croissant,286,1161.55,726.83
+Uptown,Cinnamon Roll,281,1376.3700000000001,772.22
+Uptown,Classic Matcha,349,2147.29,1386.47
+Uptown,Coffee Frappe,178,1110.8,678.26
+Uptown,Cold Brew,264,1296.7700000000002,1003.73
+Uptown,Egg Sandwich,183,1422.48,875.3100000000001
+Uptown,English Breakfast Tea,80,264.14,220.14
+Uptown,Espresso,124,313.45,236.57
+Uptown,Flat White,271,1129.84,807.35
+Uptown,Fresh Orange Juice,180,984.2499999999999,617.05
+Uptown,Frozen Yoghurt Cup,179,1050.79,588.97
+Uptown,Granola Yoghurt,107,803.78,462.45
+Uptown,Halloumi Wrap,275,2613.9,1522.15
+Uptown,Iced Americano,271,992.71,767.78
+Uptown,Iced Latte,471,2403.5699999999997,1654.6799999999998
+Uptown,Iced Matcha,435,2843.82,1795.47
+Uptown,Iced Mocha,217,1291.2,826.8199999999999
+Uptown,Lemonade,184,814.35,608.27
+Uptown,Mint Tea,114,397.25,328.84999999999997
+Uptown,Peach Iced Tea,235,998.2899999999998,739.79
+Uptown,Pistachio Cookie,262,858.97,562.9100000000001
+Uptown,Quinoa Bowl,112,1245.44,716.8
+Uptown,Soup of the Day,75,512.44,311.44
+Uptown,Spanish Latte,210,1193.97,794.97
+Uptown,Sparkling Water,208,546.0,275.6
+Uptown,Still Water,248,461.1,307.34
+Uptown,Strawberry Matcha,281,2053.7799999999997,1196.73
+Uptown,Tiramisu Cup,163,1020.86,574.24
+Uptown,Tuna Sandwich,181,1534.25,886.27
+Uptown,Turkey & Cheese Sandwich,276,2536.25,1285.97
+Uptown,Vanilla Latte,244,1269.3500000000001,866.75

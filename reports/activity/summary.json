@@ -1,0 +1,56 @@
+{
+  "basis": "Unique baskets; raw lines retained, no ML training. Dates Jan 1\u2013Jun 30 2026.",
+  "calendarDateExposure": {
+    "Monday": 26,
+    "Tuesday": 26,
+    "Wednesday": 25,
+    "Thursday": 26,
+    "Friday": 26,
+    "Saturday": 26,
+    "Sunday": 26
+  },
+  "observedHours": [
+    7,
+    23
+  ],
+  "openingHoursVerified": false,
+  "branches": {
+    "Harbour": {
+      "transactions": 16334,
+      "lowestHoursByCalendarAverage": {
+        "7": 1.8784530386740332,
+        "8": 2.74585635359116,
+        "11": 3.8287292817679557
+      },
+      "peakHour": 21,
+      "tuesdayTransactionsPerDate": 136.73076923076923,
+      "tuesdayVsEqualWeightedOtherWeekdays": 1.6573066009441908,
+      "lowestWeekday": "Saturday"
+    },
+    "Garden": {
+      "transactions": 11163,
+      "lowestHoursByCalendarAverage": {
+        "7": 1.3093922651933703,
+        "8": 1.9944751381215469,
+        "10": 2.585635359116022
+      },
+      "peakHour": 21,
+      "tuesdayTransactionsPerDate": 94.65384615384616,
+      "tuesdayVsEqualWeightedOtherWeekdays": 1.6851393669372141,
+      "lowestWeekday": "Saturday"
+    },
+    "Uptown": {
+      "transactions": 6390,
+      "lowestHoursByCalendarAverage": {
+        "7": 0.8121546961325967,
+        "8": 1.0055248618784531,
+        "9": 1.4530386740331491
+      },
+      "peakHour": 21,
+      "tuesdayTransactionsPerDate": 53.15384615384615,
+      "tuesdayVsEqualWeightedOtherWeekdays": 1.644441976503439,
+      "lowestWeekday": "Saturday"
+    }
+  },
+  "limits": "Low transaction counts do not identify unserved demand or profit opportunity. Need footfall, conversion, available stock, staff capacity, actual opening hours and intervention costs. Timezone unspecified. No significance claim from pooled heatmaps."
+}

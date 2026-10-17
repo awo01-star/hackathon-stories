@@ -1,0 +1,1357 @@
+{
+  "asOf": "2026-06-30",
+  "planningDate": "2026-07-01",
+  "isHistoricalDemo": true,
+  "currency": "USD",
+  "policy": {
+    "minimumGrossMargin": 0.3,
+    "maximumDiscount": 0.12,
+    "maximumParticipation": 0.3,
+    "note": "Rules are testable pilot policies, not learned optimal promotion effects. Busy slots receive zero offers. No inventory or capacity data is available."
+  },
+  "historicalGrossMargin": {
+    "Garden": 0.46951717422703443,
+    "Harbour": 0.6497381094525354,
+    "Uptown": 0.6259130869014853
+  },
+  "metrics": {
+    "transactions": {
+      "validation": {
+        "xgb_depth2": {
+          "mae": 1.6410659956147895,
+          "wape": 0.40293917363984816,
+          "bias": -0.03671626271548377
+        },
+        "xgb_depth4": {
+          "mae": 1.6050751198702866,
+          "wape": 0.39410215320933734,
+          "bias": -0.02751247585514055
+        },
+        "lag7": {
+          "mae": 2.210626185958254,
+          "wape": 0.5427861469172232,
+          "bias": -0.02686752601335611
+        },
+        "mean7": {
+          "mae": 1.8531670732809253,
+          "wape": 0.4550174161915116,
+          "bias": 0.0006434007055221125
+        },
+        "mean28": {
+          "mae": 1.7474473660431913,
+          "wape": 0.42905952565837635,
+          "bias": -0.03301311206265404
+        },
+        "seasonal_blend": {
+          "mae": 1.6570434625463089,
+          "wape": 0.4068622013178621,
+          "bias": -0.04368468928183161
+        }
+      },
+      "selectedForPlanning": "xgb_depth4",
+      "selectedML": "xgb_depth4",
+      "bestBaseline": "seasonal_blend",
+      "test": {
+        "lag7": {
+          "mae": 2.23921568627451,
+          "wape": 0.49609035621198955,
+          "bias": -0.008688097306689836
+        },
+        "mean7": {
+          "mae": 1.9208216619981326,
+          "wape": 0.42555128046005547,
+          "bias": -0.02267179678126679
+        },
+        "mean28": {
+          "mae": 1.8566059757236228,
+          "wape": 0.4113245211203509,
+          "bias": -0.05172003640726492
+        },
+        "seasonal_blend": {
+          "mae": 1.7326097105508869,
+          "wape": 0.38385358487443627,
+          "bias": -0.04803276653841375
+        },
+        "xgb_depth4": {
+          "mae": 1.676261521320717,
+          "wape": 0.37136984182170535,
+          "bias": -0.029385961935273677
+        }
+      },
+      "pairedDayBootstrapMAEImprovementCI95": [
+        0.029765015693884064,
+        0.08868942643998383
+      ],
+      "testCells": 1530,
+      "protocol": "Jan-Apr training after 28-day warmup; May selection by MAE; refit Jan-May; June rolling one-day holdout. This is an additional task explored after earlier June results; prospective validation needed."
+    },
+    "revenue": {
+      "validation": {
+        "xgb_depth2": {
+          "mae": 16.362455272952037,
+          "wape": 0.44841504952833505,
+          "bias": -0.03720110153501602
+        },
+        "xgb_depth4": {
+          "mae": 16.29636933286306,
+          "wape": 0.44660395641279804,
+          "bias": -0.00999180208164502
+        },
+        "lag7": {
+          "mae": 22.85237191650854,
+          "wape": 0.6262719936488073,
+          "bias": -0.023977833227451083
+        },
+        "mean7": {
+          "mae": 18.53027649769585,
+          "wape": 0.5078244502353901,
+          "bias": 0.0020103773955182035
+        },
+        "mean28": {
+          "mae": 17.344807761814405,
+          "wape": 0.4753365373245873,
+          "bias": -0.03176524433012781
+        },
+        "seasonal_blend": {
+          "mae": 16.659250813228518,
+          "wape": 0.4565487669119888,
+          "bias": -0.04201178331011603
+        }
+      },
+      "selectedForPlanning": "xgb_depth4",
+      "selectedML": "xgb_depth4",
+      "bestBaseline": "seasonal_blend",
+      "test": {
+        "lag7": {
+          "mae": 22.009300653594774,
+          "wape": 0.5375655569601845,
+          "bias": -0.015647785698082423
+        },
+        "mean7": {
+          "mae": 18.66085247432306,
+          "wape": 0.45578147673096936,
+          "bias": -0.027662528045098254
+        },
+        "mean28": {
+          "mae": 18.10946148459384,
+          "wape": 0.44231404270560853,
+          "bias": -0.05487559220508584
+        },
+        "seasonal_blend": {
+          "mae": 17.23393300653595,
+          "wape": 0.42092972153387603,
+          "bias": -0.0515008302382175
+        },
+        "xgb_depth4": {
+          "mae": 16.781218902375965,
+          "wape": 0.4098724183793233,
+          "bias": -0.030380122614044273
+        }
+      },
+      "pairedDayBootstrapMAEImprovementCI95": [
+        0.16069386101463579,
+        0.8057184509632631
+      ],
+      "testCells": 1530,
+      "protocol": "Jan-Apr training after 28-day warmup; May selection by MAE; refit Jan-May; June rolling one-day holdout. This is an additional task explored after earlier June results; prospective validation needed."
+    }
+  },
+  "slots": [
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 7,
+      "forecastTransactions": 1.5259885787963867,
+      "forecastRevenue": 19.22726821899414,
+      "pressure": 0.25433142979939777,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 8,
+      "forecastTransactions": 2.9883546829223633,
+      "forecastRevenue": 27.7631893157959,
+      "pressure": 0.49805911382039386,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 9,
+      "forecastTransactions": 3.177137613296509,
+      "forecastRevenue": 30.072877883911133,
+      "pressure": 0.5295229355494181,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 10,
+      "forecastTransactions": 3.7869560718536377,
+      "forecastRevenue": 35.21611785888672,
+      "pressure": 0.6311593453089396,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 11,
+      "forecastTransactions": 3.386749267578125,
+      "forecastRevenue": 34.99234390258789,
+      "pressure": 0.5644582112630209,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 12,
+      "forecastTransactions": 3.695859670639038,
+      "forecastRevenue": 36.26861572265625,
+      "pressure": 0.615976611773173,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 13,
+      "forecastTransactions": 3.7551252841949463,
+      "forecastRevenue": 38.20805740356445,
+      "pressure": 0.6258542140324911,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 14,
+      "forecastTransactions": 3.7667407989501953,
+      "forecastRevenue": 37.70158004760742,
+      "pressure": 0.6277901331583658,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 15,
+      "forecastTransactions": 3.748605728149414,
+      "forecastRevenue": 41.72638702392578,
+      "pressure": 0.6247676213582357,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 16,
+      "forecastTransactions": 4.563215732574463,
+      "forecastRevenue": 48.414554595947266,
+      "pressure": 0.7605359554290771,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 17,
+      "forecastTransactions": 3.8671915531158447,
+      "forecastRevenue": 42.629661560058594,
+      "pressure": 0.6445319255193075,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 18,
+      "forecastTransactions": 3.9367988109588623,
+      "forecastRevenue": 39.914283752441406,
+      "pressure": 0.6561331351598104,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 19,
+      "forecastTransactions": 6.217817783355713,
+      "forecastRevenue": 56.256690979003906,
+      "pressure": 1.036302963892619,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 20,
+      "forecastTransactions": 6.478756427764893,
+      "forecastRevenue": 65.76921844482422,
+      "pressure": 1.0797927379608154,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 21,
+      "forecastTransactions": 8.598231315612793,
+      "forecastRevenue": 91.25965118408203,
+      "pressure": 1.433038552602132,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 22,
+      "forecastTransactions": 7.393119812011719,
+      "forecastRevenue": 74.62942504882812,
+      "pressure": 1.2321866353352864,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Garden",
+      "hour": 23,
+      "forecastTransactions": 3.8020341396331787,
+      "forecastRevenue": 38.31781005859375,
+      "pressure": 0.6336723566055298,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Garden-0"
+      ],
+      "alternativeBundleIds": [
+        "Garden-0",
+        "Garden-6"
+      ],
+      "branchBusyThreshold": 6.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 7,
+      "forecastTransactions": 3.0261645317077637,
+      "forecastRevenue": 29.399171829223633,
+      "pressure": 0.5043607552846273,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 8,
+      "forecastTransactions": 3.6208009719848633,
+      "forecastRevenue": 33.435707092285156,
+      "pressure": 0.6034668286641439,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Harbour-0"
+      ],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 9,
+      "forecastTransactions": 5.876868724822998,
+      "forecastRevenue": 52.49485778808594,
+      "pressure": 0.979478120803833,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Harbour-0"
+      ],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 10,
+      "forecastTransactions": 5.806902885437012,
+      "forecastRevenue": 48.35370635986328,
+      "pressure": 0.9678171475728353,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Harbour-0"
+      ],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 11,
+      "forecastTransactions": 4.080965042114258,
+      "forecastRevenue": 43.406028747558594,
+      "pressure": 0.6801608403523763,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Harbour-0"
+      ],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 12,
+      "forecastTransactions": 5.923751354217529,
+      "forecastRevenue": 52.505615234375,
+      "pressure": 0.9872918923695883,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Harbour-0"
+      ],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 13,
+      "forecastTransactions": 6.99573278427124,
+      "forecastRevenue": 63.716854095458984,
+      "pressure": 1.1659554640452068,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 14,
+      "forecastTransactions": 6.985008716583252,
+      "forecastRevenue": 57.21791458129883,
+      "pressure": 1.164168119430542,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 15,
+      "forecastTransactions": 6.4541215896606445,
+      "forecastRevenue": 58.99827575683594,
+      "pressure": 1.0756869316101074,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 16,
+      "forecastTransactions": 7.054560661315918,
+      "forecastRevenue": 65.4403305053711,
+      "pressure": 1.1757601102193196,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 17,
+      "forecastTransactions": 7.1702561378479,
+      "forecastRevenue": 67.78958892822266,
+      "pressure": 1.1950426896413167,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 18,
+      "forecastTransactions": 8.441422462463379,
+      "forecastRevenue": 81.08135986328125,
+      "pressure": 1.4069037437438965,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 19,
+      "forecastTransactions": 8.052618980407715,
+      "forecastRevenue": 80.74383544921875,
+      "pressure": 1.3421031634012859,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 20,
+      "forecastTransactions": 9.688319206237793,
+      "forecastRevenue": 92.96060943603516,
+      "pressure": 1.6147198677062988,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 21,
+      "forecastTransactions": 12.623932838439941,
+      "forecastRevenue": 132.56753540039062,
+      "pressure": 2.1039888064066568,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 22,
+      "forecastTransactions": 12.278539657592773,
+      "forecastRevenue": 100.45948791503906,
+      "pressure": 2.0464232762654624,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Harbour",
+      "hour": 23,
+      "forecastTransactions": 7.2426652908325195,
+      "forecastRevenue": 66.00394439697266,
+      "pressure": 1.20711088180542,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Harbour-0",
+        "Harbour-6"
+      ],
+      "branchBusyThreshold": 9.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 7,
+      "forecastTransactions": 1.1686538457870483,
+      "forecastRevenue": 11.202003479003906,
+      "pressure": 0.2921634614467621,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 8,
+      "forecastTransactions": 1.5157299041748047,
+      "forecastRevenue": 11.937695503234863,
+      "pressure": 0.37893247604370117,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 9,
+      "forecastTransactions": 1.6557868719100952,
+      "forecastRevenue": 14.387716293334961,
+      "pressure": 0.4139467179775238,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 10,
+      "forecastTransactions": 1.9294716119766235,
+      "forecastRevenue": 17.464235305786133,
+      "pressure": 0.4823679029941559,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 11,
+      "forecastTransactions": 1.8457354307174683,
+      "forecastRevenue": 16.52732276916504,
+      "pressure": 0.46143385767936707,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 12,
+      "forecastTransactions": 1.9232759475708008,
+      "forecastRevenue": 17.091827392578125,
+      "pressure": 0.4808189868927002,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 13,
+      "forecastTransactions": 2.777109384536743,
+      "forecastRevenue": 21.46025848388672,
+      "pressure": 0.6942773461341858,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 14,
+      "forecastTransactions": 2.203366994857788,
+      "forecastRevenue": 19.979663848876953,
+      "pressure": 0.550841748714447,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 15,
+      "forecastTransactions": 2.378493309020996,
+      "forecastRevenue": 20.300270080566406,
+      "pressure": 0.594623327255249,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 16,
+      "forecastTransactions": 2.1959431171417236,
+      "forecastRevenue": 21.021547317504883,
+      "pressure": 0.5489857792854309,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 17,
+      "forecastTransactions": 2.317765712738037,
+      "forecastRevenue": 20.256507873535156,
+      "pressure": 0.5794414281845093,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 18,
+      "forecastTransactions": 3.2124547958374023,
+      "forecastRevenue": 29.010915756225586,
+      "pressure": 0.8031136989593506,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 19,
+      "forecastTransactions": 3.286315441131592,
+      "forecastRevenue": 29.10004234313965,
+      "pressure": 0.821578860282898,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 20,
+      "forecastTransactions": 3.8615267276763916,
+      "forecastRevenue": 36.70448684692383,
+      "pressure": 0.9653816819190979,
+      "redemptionCap": 1,
+      "distinctBundles": 1,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [
+        "Uptown-0"
+      ],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 21,
+      "forecastTransactions": 5.413769721984863,
+      "forecastRevenue": 44.61368942260742,
+      "pressure": 1.3534424304962158,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 22,
+      "forecastTransactions": 4.184123516082764,
+      "forecastRevenue": 42.11780548095703,
+      "pressure": 1.046030879020691,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "At or above branch/network busy threshold",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    },
+    {
+      "date": "2026-07-01",
+      "branch": "Uptown",
+      "hour": 23,
+      "forecastTransactions": 3.0947344303131104,
+      "forecastRevenue": 29.542617797851562,
+      "pressure": 0.7736836075782776,
+      "redemptionCap": 0,
+      "distinctBundles": 0,
+      "reason": "Forecast off-peak; cap uses at most 30% of forecast transactions",
+      "suggestedBundleIds": [],
+      "alternativeBundleIds": [
+        "Uptown-0",
+        "Uptown-6"
+      ],
+      "branchBusyThreshold": 4.0,
+      "networkBusyThreshold": 6.0
+    }
+  ],
+  "bundles": {
+    "Garden": [
+      {
+        "id": "Garden-0",
+        "branch": "Garden",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.35,
+            "cost": 2.37,
+            "category": "Cold Coffee",
+            "historicalUnits": 664
+          },
+          {
+            "name": "Quinoa Bowl",
+            "price": 11.65,
+            "cost": 7.04,
+            "category": "Meals",
+            "historicalUnits": 138
+          }
+        ],
+        "size": 2,
+        "economics": {
+          "salePrice": 14.96,
+          "cost": 9.41,
+          "grossProfit": 5.550000000000001,
+          "grossMargin": 0.37098930481283426,
+          "discount": 0.12,
+          "requestedDiscount": 0.12,
+          "listPrice": 17.0,
+          "discountDollars": 2.039999999999999
+        },
+        "discountCeiling": 0.20924369747899152,
+        "support": 10,
+        "lift": 1.13531554944075,
+        "score": 4.61,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      },
+      {
+        "id": "Garden-6",
+        "branch": "Garden",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.35,
+            "cost": 2.37,
+            "category": "Cold Coffee",
+            "historicalUnits": 664
+          },
+          {
+            "name": "Quinoa Bowl",
+            "price": 11.65,
+            "cost": 7.04,
+            "category": "Meals",
+            "historicalUnits": 138
+          },
+          {
+            "name": "Halloumi Wrap",
+            "price": 9.95,
+            "cost": 5.92,
+            "category": "Sandwiches",
+            "historicalUnits": 230
+          }
+        ],
+        "size": 3,
+        "economics": {
+          "salePrice": 23.72,
+          "cost": 15.33,
+          "grossProfit": 8.389999999999999,
+          "grossMargin": 0.35370994940978073,
+          "discount": 0.11985157699443416,
+          "requestedDiscount": 0.12,
+          "listPrice": 26.95,
+          "discountDollars": 3.2300000000000004
+        },
+        "discountCeiling": 0.1873840445269016,
+        "support": 0,
+        "lift": 0.0,
+        "score": 3.054701294725885,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      }
+    ],
+    "Harbour": [
+      {
+        "id": "Harbour-0",
+        "branch": "Harbour",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.62,
+            "cost": 1.66,
+            "category": "Cold Coffee",
+            "historicalUnits": 1069
+          },
+          {
+            "name": "Chicken Salad Bowl",
+            "price": 13.07,
+            "cost": 5.65,
+            "category": "Meals",
+            "historicalUnits": 199
+          }
+        ],
+        "size": 2,
+        "economics": {
+          "salePrice": 16.45,
+          "cost": 7.3100000000000005,
+          "grossProfit": 9.139999999999999,
+          "grossMargin": 0.5556231003039513,
+          "discount": 0.11985018726591767,
+          "requestedDiscount": 0.12,
+          "listPrice": 18.69,
+          "discountDollars": 2.240000000000002
+        },
+        "discountCeiling": 0.44125964992738664,
+        "support": 12,
+        "lift": 0.8555570239196512,
+        "score": 7.42,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      },
+      {
+        "id": "Harbour-6",
+        "branch": "Harbour",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.62,
+            "cost": 1.66,
+            "category": "Cold Coffee",
+            "historicalUnits": 1069
+          },
+          {
+            "name": "Chicken Salad Bowl",
+            "price": 13.07,
+            "cost": 5.65,
+            "category": "Meals",
+            "historicalUnits": 199
+          },
+          {
+            "name": "Halloumi Wrap",
+            "price": 10.45,
+            "cost": 4.14,
+            "category": "Sandwiches",
+            "historicalUnits": 335
+          }
+        ],
+        "size": 3,
+        "economics": {
+          "salePrice": 25.65,
+          "cost": 11.45,
+          "grossProfit": 14.2,
+          "grossMargin": 0.5536062378167641,
+          "discount": 0.1197666437886068,
+          "requestedDiscount": 0.12,
+          "listPrice": 29.14,
+          "discountDollars": 3.490000000000002
+        },
+        "discountCeiling": 0.4386704578880283,
+        "support": 0,
+        "lift": 0.0,
+        "score": 4.854288052845648,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      }
+    ],
+    "Uptown": [
+      {
+        "id": "Uptown-0",
+        "branch": "Uptown",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.14,
+            "cost": 1.59,
+            "category": "Cold Coffee",
+            "historicalUnits": 377
+          },
+          {
+            "name": "Chicken Salad Bowl",
+            "price": 11.95,
+            "cost": 5.42,
+            "category": "Meals",
+            "historicalUnits": 92
+          }
+        ],
+        "size": 2,
+        "economics": {
+          "salePrice": 15.04,
+          "cost": 7.01,
+          "grossProfit": 8.03,
+          "grossMargin": 0.5339095744680851,
+          "discount": 0.11995318899941487,
+          "requestedDiscount": 0.12,
+          "listPrice": 17.09,
+          "discountDollars": 2.0500000000000007
+        },
+        "discountCeiling": 0.4140265819610466,
+        "support": 7,
+        "lift": 1.226293103448276,
+        "score": 6.529999999999999,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      },
+      {
+        "id": "Uptown-6",
+        "branch": "Uptown",
+        "items": [
+          {
+            "name": "Iced Latte",
+            "price": 5.14,
+            "cost": 1.59,
+            "category": "Cold Coffee",
+            "historicalUnits": 377
+          },
+          {
+            "name": "Chicken Salad Bowl",
+            "price": 11.95,
+            "cost": 5.42,
+            "category": "Meals",
+            "historicalUnits": 92
+          },
+          {
+            "name": "Avocado Toast",
+            "price": 9.07,
+            "cost": 4.01,
+            "category": "Breakfast",
+            "historicalUnits": 148
+          }
+        ],
+        "size": 3,
+        "economics": {
+          "salePrice": 23.03,
+          "cost": 11.02,
+          "grossProfit": 12.010000000000002,
+          "grossMargin": 0.5214937038645245,
+          "discount": 0.1196483180428134,
+          "requestedDiscount": 0.12,
+          "listPrice": 26.16,
+          "discountDollars": 3.129999999999999
+        },
+        "discountCeiling": 0.3982088248143294,
+        "support": 0,
+        "lift": 0.0,
+        "score": 4.0976837969760425,
+        "selectionReason": "Popular drink + below-median-volume, positive-margin food; branch-specific cost; co-purchase is supporting evidence only"
+      }
+    ]
+  },
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1"
+}

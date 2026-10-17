@@ -1,0 +1,25 @@
+{
+  "rows": 51177,
+  "baskets": 33887,
+  "dates": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "sha256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "missing_customer_fraction": 0.36522265861617526,
+  "exact_duplicate_rows": 132,
+  "basket_inconsistent_fields": {
+    "Date": 1,
+    "Time": 1,
+    "Branch": 1,
+    "Order Type": 1,
+    "Customer ID": 1
+  },
+  "revenue_max_abs_rounding_error": 0.005000000000000782,
+  "gross_profit_max_abs_rounding_error": 2.6645352591003757e-15,
+  "negative_profit_lines": 0,
+  "total_revenue": 305925.14,
+  "total_gross_profit": 179430.49,
+  "beverage_baskets": 23428,
+  "multiple_distinct_beverages_fraction": 0.19280348301178077
+}

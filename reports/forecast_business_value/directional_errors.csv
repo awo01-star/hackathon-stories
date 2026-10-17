@@ -1,0 +1,10 @@
+Branch,Model,ShortageTransactions,ExcessTransactions
+Garden,Oracle,0.0,0.0
+Garden,Seasonal naive,151.0,156.0
+Garden,XGBoost,113.0,166.0
+Harbour,Oracle,0.0,0.0
+Harbour,Seasonal naive,193.0,144.0
+Harbour,XGBoost,294.0,51.0
+Uptown,Oracle,0.0,0.0
+Uptown,Seasonal naive,118.0,102.0
+Uptown,XGBoost,117.0,77.0

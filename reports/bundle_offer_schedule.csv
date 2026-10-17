@@ -1,0 +1,52 @@
+date,branch,hour,forecastTransactions,forecastRevenue,pressure,redemptionCap,distinctBundles,reason,suggestedBundleIds,alternativeBundleIds,branchBusyThreshold,networkBusyThreshold
+2026-07-01,Garden,7,1.5259885787963867,19.22726821899414,0.25433142979939777,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,8,2.9883546829223633,27.7631893157959,0.49805911382039386,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,9,3.177137613296509,30.072877883911133,0.5295229355494181,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,10,3.7869560718536377,35.21611785888672,0.6311593453089396,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,11,3.386749267578125,34.99234390258789,0.5644582112630209,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,12,3.695859670639038,36.26861572265625,0.615976611773173,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,13,3.7551252841949463,38.20805740356445,0.6258542140324911,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,14,3.7667407989501953,37.70158004760742,0.6277901331583658,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,15,3.748605728149414,41.72638702392578,0.6247676213582357,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,16,4.563215732574463,48.414554595947266,0.7605359554290771,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,17,3.8671915531158447,42.629661560058594,0.6445319255193075,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,18,3.9367988109588623,39.914283752441406,0.6561331351598104,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,19,6.217817783355713,56.256690979003906,1.036302963892619,0,0,At or above branch/network busy threshold,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,20,6.478756427764893,65.76921844482422,1.0797927379608154,0,0,At or above branch/network busy threshold,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,21,8.598231315612793,91.25965118408203,1.433038552602132,0,0,At or above branch/network busy threshold,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,22,7.393119812011719,74.62942504882812,1.2321866353352864,0,0,At or above branch/network busy threshold,[],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Garden,23,3.8020341396331787,38.31781005859375,0.6336723566055298,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Garden-0'],"['Garden-0', 'Garden-6']",6.0,6.0
+2026-07-01,Harbour,7,3.0261645317077637,29.399171829223633,0.5043607552846273,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,8,3.6208009719848633,33.435707092285156,0.6034668286641439,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Harbour-0'],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,9,5.876868724822998,52.49485778808594,0.979478120803833,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Harbour-0'],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,10,5.806902885437012,48.35370635986328,0.9678171475728353,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Harbour-0'],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,11,4.080965042114258,43.406028747558594,0.6801608403523763,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Harbour-0'],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,12,5.923751354217529,52.505615234375,0.9872918923695883,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Harbour-0'],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,13,6.99573278427124,63.716854095458984,1.1659554640452068,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,14,6.985008716583252,57.21791458129883,1.164168119430542,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,15,6.4541215896606445,58.99827575683594,1.0756869316101074,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,16,7.054560661315918,65.4403305053711,1.1757601102193196,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,17,7.1702561378479,67.78958892822266,1.1950426896413167,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,18,8.441422462463379,81.08135986328125,1.4069037437438965,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,19,8.052618980407715,80.74383544921875,1.3421031634012859,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,20,9.688319206237793,92.96060943603516,1.6147198677062988,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,21,12.623932838439941,132.56753540039062,2.1039888064066568,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,22,12.278539657592773,100.45948791503906,2.0464232762654624,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Harbour,23,7.2426652908325195,66.00394439697266,1.20711088180542,0,0,At or above branch/network busy threshold,[],"['Harbour-0', 'Harbour-6']",9.0,6.0
+2026-07-01,Uptown,7,1.1686538457870483,11.202003479003906,0.2921634614467621,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,8,1.5157299041748047,11.937695503234863,0.37893247604370117,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,9,1.6557868719100952,14.387716293334961,0.4139467179775238,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,10,1.9294716119766235,17.464235305786133,0.4823679029941559,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,11,1.8457354307174683,16.52732276916504,0.46143385767936707,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,12,1.9232759475708008,17.091827392578125,0.4808189868927002,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,13,2.777109384536743,21.46025848388672,0.6942773461341858,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,14,2.203366994857788,19.979663848876953,0.550841748714447,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,15,2.378493309020996,20.300270080566406,0.594623327255249,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,16,2.1959431171417236,21.021547317504883,0.5489857792854309,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,17,2.317765712738037,20.256507873535156,0.5794414281845093,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,18,3.2124547958374023,29.010915756225586,0.8031136989593506,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,19,3.286315441131592,29.10004234313965,0.821578860282898,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,20,3.8615267276763916,36.70448684692383,0.9653816819190979,1,1,Forecast off-peak; cap uses at most 30% of forecast transactions,['Uptown-0'],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,21,5.413769721984863,44.61368942260742,1.3534424304962158,0,0,At or above branch/network busy threshold,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,22,4.184123516082764,42.11780548095703,1.046030879020691,0,0,At or above branch/network busy threshold,[],"['Uptown-0', 'Uptown-6']",4.0,6.0
+2026-07-01,Uptown,23,3.0947344303131104,29.542617797851562,0.7736836075782776,0,0,Forecast off-peak; cap uses at most 30% of forecast transactions,[],"['Uptown-0', 'Uptown-6']",4.0,6.0

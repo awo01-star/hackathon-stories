@@ -1,0 +1,128 @@
+{
+  "validation": {
+    "poisson_depth2": {
+      "mae": 1.2764854431152344,
+      "wape": 0.5216376955662141,
+      "poisson_deviance": 1.2626467943191528,
+      "bias_fraction": -0.04085294404843277
+    },
+    "poisson_depth4": {
+      "mae": 1.271159291267395,
+      "wape": 0.5194611663860731,
+      "poisson_deviance": 1.2593845129013062,
+      "bias_fraction": -0.02335186840884679
+    },
+    "lag7": {
+      "mae": 1.7005973715651135,
+      "wape": 0.6949516648764769,
+      "poisson_deviance": 5.424761802757862,
+      "bias_fraction": -0.02568108583146177
+    },
+    "mean7": {
+      "mae": 1.4080559822495304,
+      "wape": 0.5754041876490855,
+      "poisson_deviance": 1.4937693971128405,
+      "bias_fraction": -0.0004324354485472579
+    },
+    "mean28": {
+      "mae": 1.336721283495477,
+      "wape": 0.5462531560812978,
+      "poisson_deviance": 1.3681525788687114,
+      "bias_fraction": -0.036697727621465434
+    },
+    "seasonal4": {
+      "mae": 1.363142174432497,
+      "wape": 0.5570500927643784,
+      "poisson_deviance": 1.6424696763211546,
+      "bias_fraction": -0.057391856264036714
+    },
+    "seasonal_blend": {
+      "mae": 1.305393411845025,
+      "wape": 0.5334509743747123,
+      "poisson_deviance": 1.332986974512665,
+      "bias_fraction": -0.047044791942751074
+    }
+  },
+  "selected_ml": "poisson_depth4",
+  "test": {
+    "lag7": {
+      "mae": 1.8128395061728395,
+      "wape": 0.6667877576968486,
+      "poisson_deviance": 5.266046332829096,
+      "bias_fraction": -0.012169648533284897
+    },
+    "mean7": {
+      "mae": 1.5298412698412698,
+      "wape": 0.5626970432165237,
+      "poisson_deviance": 1.623181535970462,
+      "bias_fraction": -0.023833309547595355
+    },
+    "mean28": {
+      "mae": 1.4625396825396824,
+      "wape": 0.5379425769036158,
+      "poisson_deviance": 1.468334761514325,
+      "bias_fraction": -0.05140962933170733
+    },
+    "seasonal4": {
+      "mae": 1.4922222222222221,
+      "wape": 0.5488602306784125,
+      "poisson_deviance": 1.6661113404955357,
+      "bias_fraction": -0.04454636272818091
+    },
+    "seasonal_blend": {
+      "mae": 1.42310405643739,
+      "wape": 0.5234376013596793,
+      "poisson_deviance": 1.4128665200787562,
+      "bias_fraction": -0.047977996029944035
+    },
+    "poisson_depth4": {
+      "mae": 1.3727630376815796,
+      "wape": 0.5049214919574166,
+      "poisson_deviance": 1.3096779584884644,
+      "bias_fraction": -0.007536054144718918
+    }
+  },
+  "test_rows": 4050,
+  "protocol": "One day ahead; observed preceding June days become available before the next forecast. Not a fixed June 1 month-ahead forecast.",
+  "scenario_only_poisson_stocking": {
+    "lag7": {
+      "simulated_gross_profit": 6048.62,
+      "unsold_units": 1689.0,
+      "unserved_observed_units": 1790.0
+    },
+    "mean7": {
+      "simulated_gross_profit": 7704.95,
+      "unsold_units": 1422.0,
+      "unserved_observed_units": 1528.0
+    },
+    "mean28": {
+      "simulated_gross_profit": 8103.5199999999995,
+      "unsold_units": 1286.0,
+      "unserved_observed_units": 1537.0
+    },
+    "seasonal4": {
+      "simulated_gross_profit": 7965.82,
+      "unsold_units": 1332.0,
+      "unserved_observed_units": 1544.0
+    },
+    "seasonal_blend": {
+      "simulated_gross_profit": 8364.85,
+      "unsold_units": 1261.0,
+      "unserved_observed_units": 1476.0
+    },
+    "poisson_depth4": {
+      "simulated_gross_profit": 8655.41,
+      "unsold_units": 1338.0,
+      "unserved_observed_units": 1323.0
+    }
+  },
+  "scenario_scope": "Food only; training mean undiscounted prices/costs; every unsold unit discarded; observed sales treated as demand. Not measured savings.",
+  "paired_day_bootstrap": {
+    "baseline": "seasonal_blend",
+    "metric": "baseline MAE minus model MAE; positive favors model",
+    "ci95": [
+      0.033078149323136505,
+      0.06892738510791796
+    ]
+  }
+}

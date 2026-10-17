@@ -1,0 +1,13 @@
+comparison,factor,dailyGrossProfitDifference,sixMonthAccountingDifference
+Garden to Harbour,transactions_per_day,145.57628731968853,26349.308004863626
+Garden to Harbour,units_per_basket,-0.010832299571434115,-1.9606462224295749
+Garden to Harbour,product_mix,-2.2217973110062608,-402.1453132921332
+Garden to Harbour,unit_prices,33.59383529371185,6080.484188161845
+Garden to Harbour,unit_costs,106.80061774017415,19330.91181097152
+Garden to Harbour,discounts,-2.1941880910631775,-397.1480444824351
+Uptown to Harbour,transactions_per_day,314.56665139732894,56936.56390291654
+Uptown to Harbour,units_per_basket,1.6622406079085472,300.86555003144707
+Uptown to Harbour,product_mix,-9.419640732352764,-1704.9549725558504
+Uptown to Harbour,unit_prices,50.38383726246697,9119.474544506522
+Uptown to Harbour,unit_costs,-8.329727776873906,-1507.680727614177
+Uptown to Harbour,discounts,-1.5049077198037402,-272.38829728447695

@@ -1,0 +1,82 @@
+{
+  "kind": "optional_external_reference_gallery",
+  "notTrainingData": true,
+  "notStoriesProductPhotos": true,
+  "references": [
+    {
+      "id": "iced_matcha-example",
+      "familyId": "iced_matcha",
+      "image": "./assets/references/iced_matcha.jpg",
+      "sourceTitle": "Creamy Matcha Latte.jpg",
+      "author": "Cali2025",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Creamy_Matcha_Latte.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Creamy_Matcha_Latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Creamy_Matcha_Latte.jpg/960px-Creamy_Matcha_Latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sha256": "a781156fdbbac57383317593a2bf6f787d2760c718b1252c593bfa09e6d5136a",
+      "changes": "Downloaded Wikimedia thumbnail (or unscaled small original); displayed with a cropped preview. Source photograph retains its listed license.",
+      "verifiedStoriesPhoto": false
+    },
+    {
+      "id": "hot_matcha-example",
+      "familyId": "hot_matcha",
+      "image": "./assets/references/hot_matcha.jpg",
+      "sourceTitle": "Hot Matcha Latte.jpg",
+      "author": "Robijuniarta",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Hot_Matcha_Latte.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Hot_Matcha_Latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Hot_Matcha_Latte.jpg/960px-Hot_Matcha_Latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sha256": "50f8ac50207a5c966fe4107d60c07acea6132991f2cc994c4dc485a3b2a4703a",
+      "changes": "Downloaded Wikimedia thumbnail (or unscaled small original); displayed with a cropped preview. Source photograph retains its listed license.",
+      "verifiedStoriesPhoto": false
+    },
+    {
+      "id": "hot_milk_coffee-example",
+      "familyId": "hot_milk_coffee",
+      "image": "./assets/references/hot_milk_coffee.jpg",
+      "sourceTitle": "Cappuccino at Sightglass Coffee.jpg",
+      "author": "Jonathan McIntosh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cappuccino_at_Sightglass_Coffee.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Cappuccino_at_Sightglass_Coffee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/960px-Cappuccino_at_Sightglass_Coffee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sha256": "c47772d759d27549ae8d11e039fdbbf030adfc6da97bc44cea0595028169bb18",
+      "changes": "Downloaded Wikimedia thumbnail (or unscaled small original); displayed with a cropped preview. Source photograph retains its listed license.",
+      "verifiedStoriesPhoto": false
+    },
+    {
+      "id": "iced_milk_coffee-example",
+      "familyId": "iced_milk_coffee",
+      "image": "./assets/references/iced_milk_coffee.jpg",
+      "sourceTitle": "Iced latte.jpg",
+      "author": "Kritzolina",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Iced_latte.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Iced_latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Iced_latte.jpg/960px-Iced_latte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "sha256": "f737f123f778273f1952c8ae338de0313b547f6065fb76ceb0d1d0c4114d0e62",
+      "changes": "Downloaded Wikimedia thumbnail (or unscaled small original); displayed with a cropped preview. Source photograph retains its listed license.",
+      "verifiedStoriesPhoto": false
+    },
+    {
+      "id": "black_coffee-example",
+      "familyId": "black_coffee",
+      "image": "./assets/references/black_coffee.jpg",
+      "sourceTitle": "Espresso.jpg",
+      "author": "Ericd; cropped version by Camembert",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Espresso.jpg",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Espresso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Espresso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "sha256": "3f00e6e22eff8e5762f484d6f8c698c369d0d1452ade06f4ae6011a80f21b72e",
+      "changes": "Downloaded Wikimedia thumbnail (or unscaled small original); displayed with a cropped preview. Source photograph retains its listed license.",
+      "verifiedStoriesPhoto": false
+    }
+  ]
+}

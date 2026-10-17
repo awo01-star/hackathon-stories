@@ -1,0 +1,54 @@
+{
+  "tuesdayMean": 94.84615384615384,
+  "otherWeekdaysMean": 61.79611650485437,
+  "tuesdayMedian": 92.5,
+  "otherWeekdaysMedian": 59.0,
+  "tuesdayBranchDays": 78,
+  "otherWeekdayBranchDays": 309,
+  "meanRatio": 1.53482385642637,
+  "medianRatio": 1.5677966101694916,
+  "comparator": [
+    "Monday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
+  "dateRange": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "byBranch": {
+    "Garden": {
+      "tuesdayMean": 94.65384615384616,
+      "otherWeekdaysMean": 60.81553398058252,
+      "tuesdayMedian": 95.0,
+      "otherWeekdaysMedian": 60.0,
+      "tuesdayBranchDays": 26,
+      "otherWeekdayBranchDays": 103,
+      "meanRatio": 1.556409028391787,
+      "medianRatio": 1.5833333333333333
+    },
+    "Harbour": {
+      "tuesdayMean": 136.73076923076923,
+      "otherWeekdaysMean": 89.55339805825243,
+      "tuesdayMedian": 136.0,
+      "otherWeekdaysMedian": 88.0,
+      "tuesdayBranchDays": 26,
+      "otherWeekdayBranchDays": 103,
+      "meanRatio": 1.5268071585829608,
+      "medianRatio": 1.5454545454545454
+    },
+    "Uptown": {
+      "tuesdayMean": 53.15384615384615,
+      "otherWeekdaysMean": 35.019417475728154,
+      "tuesdayMedian": 49.5,
+      "otherWeekdaysMedian": 35.0,
+      "tuesdayBranchDays": 26,
+      "otherWeekdayBranchDays": 103,
+      "meanRatio": 1.5178392442046449,
+      "medianRatio": 1.4142857142857144
+    }
+  },
+  "limits": "Pooled branch-day distributions describe higher typical Tuesday activity; they do not alone prove persistence, statistical significance, causation, or incremental-profit opportunity. Weekends excluded from printed comparator; included as separate boxes in plot."
+}

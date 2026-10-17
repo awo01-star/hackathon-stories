@@ -1,0 +1,56 @@
+{
+  "selectedByMay": "XGBoost",
+  "selectedSettings": {
+    "Random Forest": {
+      "trial": 0,
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "min_samples_leaf": 2,
+        "max_features": 1.0
+      }
+    },
+    "XGBoost": {
+      "trial": 1,
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    }
+  },
+  "validationMetrics": {
+    "Seasonal naive": {
+      "MAE": 8.935483870967742,
+      "RMSE": 12.331880181756725,
+      "WAPE": 0.12905730703525392
+    },
+    "Random Forest": {
+      "MAE": 9.19872057625117,
+      "RMSE": 13.151363952816252,
+      "WAPE": 0.13285929703235888
+    },
+    "XGBoost": {
+      "MAE": 8.252264063845399,
+      "RMSE": 12.43378594488126,
+      "WAPE": 0.11918940176077374
+    }
+  },
+  "trainingRange": [
+    "2026-01-08",
+    "2026-04-30"
+  ],
+  "validationRange": [
+    "2026-05-01",
+    "2026-05-31"
+  ],
+  "testRange": [
+    "2026-06-01",
+    "2026-06-30"
+  ],
+  "refitPolicy": "Refit each selected ML configuration and preprocessing on Jan 8\u2013May 31 before June scoring. Never fit on June."
+}

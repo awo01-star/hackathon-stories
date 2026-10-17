@@ -1,0 +1,337 @@
+{
+  "validation": {
+    "category_prior": {
+      "roc_auc": 0.7134252884203705,
+      "pr_auc": 0.17050581026700837,
+      "log_loss": 0.26154884655294147,
+      "brier": 0.07208841705394747,
+      "prevalence": 0.08396226415094339
+    },
+    "branch_time": {
+      "roc_auc": 0.7209992480080243,
+      "pr_auc": 0.1869001371069324,
+      "log_loss": 0.26196703961999085,
+      "brier": 0.07214598814679496,
+      "prevalence": 0.08396226415094339
+    },
+    "drink_branch": {
+      "roc_auc": 0.7309340488684317,
+      "pr_auc": 0.2138473118328337,
+      "log_loss": 0.2597010056347208,
+      "brier": 0.07139941901702627,
+      "prevalence": 0.08396226415094339
+    },
+    "logistic": {
+      "roc_auc": 0.7213475090603633,
+      "pr_auc": 0.20659113247875388,
+      "log_loss": 0.26104426905112627,
+      "brier": 0.07187100473064321,
+      "prevalence": 0.08396226415094339
+    },
+    "boosted_depth2": {
+      "roc_auc": 0.7296430623997479,
+      "pr_auc": 0.2148906175205035,
+      "log_loss": 0.25990283489227295,
+      "brier": 0.07163375616073608,
+      "prevalence": 0.08396226415094339
+    },
+    "boosted_depth4": {
+      "roc_auc": 0.7363774563621489,
+      "pr_auc": 0.21979738187776002,
+      "log_loss": 0.2586071193218231,
+      "brier": 0.07133305072784424,
+      "prevalence": 0.08396226415094339
+    }
+  },
+  "selected_ml": "boosted_depth4",
+  "test": {
+    "category_prior": {
+      "roc_auc": 0.7217736319289092,
+      "pr_auc": 0.17569940116808844,
+      "log_loss": 0.2627506054366393,
+      "brier": 0.07280216864360273,
+      "prevalence": 0.08521335023236164
+    },
+    "branch_time": {
+      "roc_auc": 0.7299899773552294,
+      "pr_auc": 0.18698389418607447,
+      "log_loss": 0.262613843553172,
+      "brier": 0.0728417029808016,
+      "prevalence": 0.08521335023236164
+    },
+    "drink_branch": {
+      "roc_auc": 0.7355677223899811,
+      "pr_auc": 0.21423860416739976,
+      "log_loss": 0.2612481394522398,
+      "brier": 0.07226949019474364,
+      "prevalence": 0.08521335023236164
+    },
+    "boosted_depth4": {
+      "roc_auc": 0.7450688567121277,
+      "pr_auc": 0.2200486973706831,
+      "log_loss": 0.2595826983451843,
+      "brier": 0.07203904539346695,
+      "prevalence": 0.08521335023236164
+    }
+  },
+  "split": {
+    "train": "Jan\u2013Apr",
+    "validation": "May",
+    "test": "June",
+    "final_fit": "Jan\u2013May"
+  },
+  "test_baskets": 4734,
+  "paired_day_bootstrap": {
+    "baseline": "drink_branch",
+    "metric": "baseline log loss minus ML log loss (positive favors ML)",
+    "ci95": [
+      0.0008917852505476387,
+      0.0023349623583128224
+    ],
+    "replicates": 500
+  },
+  "per_category": {
+    "Bakery": {
+      "category_prior": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.22391212505280947,
+        "log_loss": 0.5318200838881839,
+        "brier": 0.1737772471346123,
+        "prevalence": 0.22391212505280947
+      },
+      "branch_time": {
+        "roc_auc": 0.49805029734698697,
+        "pr_auc": 0.22489682089397067,
+        "log_loss": 0.5330928207398722,
+        "brier": 0.1742216538677214,
+        "prevalence": 0.22391212505280947
+      },
+      "drink_branch": {
+        "roc_auc": 0.5771037684493793,
+        "pr_auc": 0.2760573730596057,
+        "log_loss": 0.525243156591685,
+        "brier": 0.17145760665374765,
+        "prevalence": 0.22391212505280947
+      },
+      "boosted_depth4": {
+        "roc_auc": 0.5917163956820493,
+        "pr_auc": 0.2824063560489172,
+        "log_loss": 0.5234795212745667,
+        "brier": 0.1708797961473465,
+        "prevalence": 0.22391212505280947
+      }
+    },
+    "Breakfast": {
+      "category_prior": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.03358681875792142,
+        "log_loss": 0.1472848301306593,
+        "brier": 0.032478996775786764,
+        "prevalence": 0.03358681875792142
+      },
+      "branch_time": {
+        "roc_auc": 0.5385043131594323,
+        "pr_auc": 0.04165514375816519,
+        "log_loss": 0.14768279796523603,
+        "brier": 0.03251220609109638,
+        "prevalence": 0.03358681875792142
+      },
+      "drink_branch": {
+        "roc_auc": 0.5070089699969069,
+        "pr_auc": 0.03771162839367642,
+        "log_loss": 0.1484793132054105,
+        "brier": 0.032569718013986254,
+        "prevalence": 0.03358681875792142
+      },
+      "boosted_depth4": {
+        "roc_auc": 0.5740557445784789,
+        "pr_auc": 0.04549560280070544,
+        "log_loss": 0.1464986801147461,
+        "brier": 0.032427627593278885,
+        "prevalence": 0.03358681875792142
+      }
+    },
+    "Desserts": {
+      "category_prior": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.0699197296155471,
+        "log_loss": 0.2534672886421686,
+        "brier": 0.06503555764492361,
+        "prevalence": 0.0699197296155471
+      },
+      "branch_time": {
+        "roc_auc": 0.583214342322215,
+        "pr_auc": 0.08796462108789514,
+        "log_loss": 0.2503450556430622,
+        "brier": 0.06466537322752429,
+        "prevalence": 0.0699197296155471
+      },
+      "drink_branch": {
+        "roc_auc": 0.5344038979190925,
+        "pr_auc": 0.07532516982417282,
+        "log_loss": 0.2535951310186359,
+        "brier": 0.06505984106803604,
+        "prevalence": 0.0699197296155471
+      },
+      "boosted_depth4": {
+        "roc_auc": 0.5837920862800905,
+        "pr_auc": 0.09458736600413328,
+        "log_loss": 0.2512648105621338,
+        "brier": 0.06474602222442627,
+        "prevalence": 0.0699197296155471
+      }
+    },
+    "Meals": {
+      "category_prior": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.025982256020278833,
+        "log_loss": 0.12050237740151769,
+        "brier": 0.025308033597427074,
+        "prevalence": 0.025982256020278833
+      },
+      "branch_time": {
+        "roc_auc": 0.5662105287285794,
+        "pr_auc": 0.0313523278788277,
+        "log_loss": 0.1202530226144267,
+        "brier": 0.025307074961334684,
+        "prevalence": 0.025982256020278833
+      },
+      "drink_branch": {
+        "roc_auc": 0.5657018476495762,
+        "pr_auc": 0.03360660470077909,
+        "log_loss": 0.12071214372515676,
+        "brier": 0.025319203240636117,
+        "prevalence": 0.025982256020278833
+      },
+      "boosted_depth4": {
+        "roc_auc": 0.5861028681854807,
+        "pr_auc": 0.035525892082240676,
+        "log_loss": 0.11948669701814651,
+        "brier": 0.025255272164940834,
+        "prevalence": 0.025982256020278833
+      }
+    },
+    "Sandwiches": {
+      "category_prior": {
+        "roc_auc": 0.5,
+        "pr_auc": 0.07266582171525138,
+        "log_loss": 0.2606784471206672,
+        "brier": 0.06741100806526394,
+        "prevalence": 0.07266582171525138
+      },
+      "branch_time": {
+        "roc_auc": 0.520220374000106,
+        "pr_auc": 0.08057390378929966,
+        "log_loss": 0.2616955208032631,
+        "brier": 0.06750220675633124,
+        "prevalence": 0.07266582171525138
+      },
+      "drink_branch": {
+        "roc_auc": 0.5775143031201991,
+        "pr_auc": 0.1023417031875948,
+        "log_loss": 0.2582109527203105,
+        "brier": 0.0669410819973121,
+        "prevalence": 0.07266582171525138
+      },
+      "boosted_depth4": {
+        "roc_auc": 0.5852177914922922,
+        "pr_auc": 0.11304833141116075,
+        "log_loss": 0.25718358159065247,
+        "brier": 0.06688646972179413,
+        "prevalence": 0.07266582171525138
+      }
+    }
+  },
+  "per_branch": {
+    "Garden": {
+      "roc_auc": 0.7400973668487925,
+      "pr_auc": 0.21564884252317235,
+      "log_loss": 0.2600902020931244,
+      "brier": 0.07185501605272293,
+      "prevalence": 0.08435643564356436
+    },
+    "Harbour": {
+      "roc_auc": 0.7574453228610659,
+      "pr_auc": 0.24186892551462072,
+      "log_loss": 0.25999554991722107,
+      "brier": 0.07274631410837173,
+      "prevalence": 0.08741438356164384
+    },
+    "Uptown": {
+      "roc_auc": 0.7201519839083983,
+      "pr_auc": 0.18013753865295573,
+      "log_loss": 0.25761955976486206,
+      "brier": 0.07048366218805313,
+      "prevalence": 0.08086070215175538
+    }
+  },
+  "retrieval_policies": {
+    "category_prior_probability": {
+      "hit_rate": 0.22391212505280947,
+      "matched_margin_proxy": 0.5573288099245721,
+      "choices": {
+        "Bakery": 4734
+      }
+    },
+    "category_prior_margin": {
+      "hit_rate": 0.22391212505280947,
+      "matched_margin_proxy": 0.5573288099245721,
+      "choices": {
+        "Bakery": 4734
+      }
+    },
+    "branch_time_probability": {
+      "hit_rate": 0.22391212505280947,
+      "matched_margin_proxy": 0.5573288099245721,
+      "choices": {
+        "Bakery": 4734
+      }
+    },
+    "branch_time_margin": {
+      "hit_rate": 0.2175749894381073,
+      "matched_margin_proxy": 0.5590063500651027,
+      "choices": {
+        "Bakery": 4396,
+        "Sandwiches": 338
+      }
+    },
+    "drink_branch_probability": {
+      "hit_rate": 0.2249683143219265,
+      "matched_margin_proxy": 0.564973075256268,
+      "choices": {
+        "Bakery": 4653,
+        "Sandwiches": 81
+      }
+    },
+    "drink_branch_margin": {
+      "hit_rate": 0.22032108153781158,
+      "matched_margin_proxy": 0.6010914598581699,
+      "choices": {
+        "Bakery": 3940,
+        "Sandwiches": 794
+      }
+    },
+    "boosted_depth4_probability": {
+      "hit_rate": 0.22391212505280947,
+      "matched_margin_proxy": 0.5573288099245721,
+      "choices": {
+        "Bakery": 4734
+      }
+    },
+    "boosted_depth4_margin": {
+      "hit_rate": 0.22454583861427968,
+      "matched_margin_proxy": 0.5959793943021311,
+      "choices": {
+        "Bakery": 4281,
+        "Sandwiches": 453
+      }
+    }
+  },
+  "training_unit_margins": {
+    "Bakery": 2.4657841447651876,
+    "Breakfast": 4.604113510798594,
+    "Desserts": 2.909462365591398,
+    "Meals": 5.536452702702703,
+    "Sandwiches": 4.9052304221720915
+  }
+}

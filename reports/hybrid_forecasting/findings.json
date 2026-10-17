@@ -1,0 +1,223 @@
+{
+  "step": 9,
+  "exploratory": true,
+  "independentOutOfSampleValidation": false,
+  "actualSavingsMeasured": false,
+  "selectionTiming": "Hybrid specified after examining June; hindsight comparison only.",
+  "noRetraining": true,
+  "policyMappings": {
+    "A_AllNaive": {
+      "Garden": "Seasonal naive",
+      "Harbour": "Seasonal naive",
+      "Uptown": "Seasonal naive"
+    },
+    "B_AllXGBoost": {
+      "Garden": "XGBoost",
+      "Harbour": "XGBoost",
+      "Uptown": "XGBoost"
+    },
+    "C_Hybrid": {
+      "Harbour": "Seasonal naive",
+      "Garden": "XGBoost",
+      "Uptown": "XGBoost"
+    }
+  },
+  "branchDays": 90,
+  "daysPerBranch": 30,
+  "dates": [
+    "2026-06-01",
+    "2026-06-30"
+  ],
+  "economicsWindow": [
+    "2026-01-01",
+    "2026-05-31"
+  ],
+  "shortageFractionsOfGP": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "wasteFractionsOfRecordedInputCost": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "capacityRule": "floor(forecast + 0.5), same as Step 8",
+  "lockedInputHashes": {
+    "stories_transactions.csv": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+    "artifacts/daily_demand_models/test_predictions.csv": "4ecc716f517426d57089d6c145eea337d9050bccb2fe60dc7cc925c639116f8f",
+    "artifacts/daily_demand_models/best_model.joblib": "3de9a5a9473bd22a9ece035541b40a1c50f7b99d41efc7b0f2e60ed388b3be50",
+    "artifacts/daily_demand_models/random_forest.joblib": "159a026acdd939443f4af33a8e120eb39d5ab9766bdb98c385e582f06dcc7b0c",
+    "artifacts/daily_demand_models/validation_predictions.csv": "bca4b0cdf745ea2f01eefaaae3c49b003b271f5d3852ddd3e93af58238c68838",
+    "artifacts/daily_demand_models/xgboost.joblib": "8fcb24bc66814dd5953a1cee60914312a52d69fd648c7f5da5cad484708bfbbe",
+    "reports/forecast_business_value/REPORT.md": "4b9a6d69e00297583828704c21f8391308054824bd99d01e50e8f975d398d919",
+    "reports/forecast_business_value/continuous_decision_costs.csv": "20bea6b835e74a942da630aca7398bbfbf5aff3d3aff9217cc7642c0a48b08dc",
+    "reports/forecast_business_value/continuous_model_comparison.csv": "18ba086b941781c7a98a211f86ac0a64432bafe1c0520ce17570273c6cd31bb2",
+    "reports/forecast_business_value/decision_costs.csv": "ce94466f52d2d4c94917b722ad7336d707ebec45b453a740f8c2ced0089aa538",
+    "reports/forecast_business_value/directional_errors.csv": "2fafa90a24aa8717d3a63fbe67d7c2bb89d344527c19fea71e641c150b0b7b66",
+    "reports/forecast_business_value/findings.json": "58ad2734f3032b5511b2c6c7aa335d4b8bf6c2433febb41d2615bbadf219de38",
+    "reports/forecast_business_value/historical_economics.csv": "646880d883035a1aaf5799568dc682b384b248d7faa1a8cdd77a3816250c19c1",
+    "reports/forecast_business_value/model_comparison.csv": "8820d6f0ef9cb4e378ae17deae5a2d56fedd1dc121330fe738d755e3420f8ca4",
+    "reports/forecast_business_value/scenario_unit_costs.csv": "9bbc400d5a44b1f9e26f62bcaad49fa237a3bc53d9276f45bec96222e9589f27",
+    "reports/demand_forecasting/selection_lock.json": "87757d9a088fbb6eb37e664e5dc3f09e4c158975a155785df526b880be79dbe1"
+  },
+  "overallComparisons": [
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.1",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.1,
+      "AllNaiveCostUSD": 761.2539083983497,
+      "AllXGBoostCostUSD": 837.3351290005454,
+      "HybridCostUSD": 716.6013297651423,
+      "HybridImprovementVsNaiveUSD": 44.65257863320744,
+      "HybridImprovementVsXGBoostUSD": 120.73379923540313,
+      "BestUniformCostUSD": 761.2539083983497,
+      "HybridImprovementVsBestUniformUSD": 44.65257863320744,
+      "HybridReductionVsBestUniformFraction": 0.058656616590849205,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.25",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.25,
+      "AllNaiveCostUSD": 991.6607125715201,
+      "AllXGBoostCostUSD": 1017.7179881445974,
+      "HybridCostUSD": 941.8506016756446,
+      "HybridImprovementVsNaiveUSD": 49.81011089587548,
+      "HybridImprovementVsXGBoostUSD": 75.86738646895276,
+      "BestUniformCostUSD": 991.6607125715201,
+      "HybridImprovementVsBestUniformUSD": 49.81011089587548,
+      "HybridReductionVsBestUniformFraction": 0.05022898483767763,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.25_W0.5",
+      "ShortageFraction": 0.25,
+      "WasteFraction": 0.5,
+      "AllNaiveCostUSD": 1375.6720528601375,
+      "AllXGBoostCostUSD": 1318.3560867180172,
+      "HybridCostUSD": 1317.266054859815,
+      "HybridImprovementVsNaiveUSD": 58.40599800032237,
+      "HybridImprovementVsXGBoostUSD": 1.09003185820211,
+      "BestUniformCostUSD": 1318.3560867180172,
+      "HybridImprovementVsBestUniformUSD": 1.09003185820211,
+      "HybridReductionVsBestUniformFraction": 0.0008268114124733105,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "B_AllXGBoost"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.1",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.1,
+      "AllNaiveCostUSD": 1368.9032806812525,
+      "AllXGBoostCostUSD": 1554.4150185717228,
+      "HybridCostUSD": 1283.0364782566164,
+      "HybridImprovementVsNaiveUSD": 85.86680242463603,
+      "HybridImprovementVsXGBoostUSD": 271.3785403151064,
+      "BestUniformCostUSD": 1368.9032806812525,
+      "HybridImprovementVsBestUniformUSD": 85.86680242463603,
+      "HybridReductionVsBestUniformFraction": 0.06272671242478381,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.25",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.25,
+      "AllNaiveCostUSD": 1599.310084854423,
+      "AllXGBoostCostUSD": 1734.7978777157748,
+      "HybridCostUSD": 1508.2857501671187,
+      "HybridImprovementVsNaiveUSD": 91.02433468730419,
+      "HybridImprovementVsXGBoostUSD": 226.51212754865605,
+      "BestUniformCostUSD": 1599.310084854423,
+      "HybridImprovementVsBestUniformUSD": 91.02433468730419,
+      "HybridReductionVsBestUniformFraction": 0.05691475064736409,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S0.5_W0.5",
+      "ShortageFraction": 0.5,
+      "WasteFraction": 0.5,
+      "AllNaiveCostUSD": 1983.3214251430402,
+      "AllXGBoostCostUSD": 2035.4359762891947,
+      "HybridCostUSD": 1883.7012033512892,
+      "HybridImprovementVsNaiveUSD": 99.62022179175096,
+      "HybridImprovementVsXGBoostUSD": 151.73477293790552,
+      "BestUniformCostUSD": 1983.3214251430402,
+      "HybridImprovementVsBestUniformUSD": 99.62022179175096,
+      "HybridReductionVsBestUniformFraction": 0.05022898483767763,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.1",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.1,
+      "AllNaiveCostUSD": 2584.2020252470584,
+      "AllXGBoostCostUSD": 2988.5747977140777,
+      "HybridCostUSD": 2415.9067752395645,
+      "HybridImprovementVsNaiveUSD": 168.2952500074939,
+      "HybridImprovementVsXGBoostUSD": 572.6680224745132,
+      "BestUniformCostUSD": 2584.2020252470584,
+      "HybridImprovementVsBestUniformUSD": 168.2952500074939,
+      "HybridReductionVsBestUniformFraction": 0.06512464906508396,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.25",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.25,
+      "AllNaiveCostUSD": 2814.6088294202286,
+      "AllXGBoostCostUSD": 3168.9576568581297,
+      "HybridCostUSD": 2641.1560471500666,
+      "HybridImprovementVsNaiveUSD": 173.45278227016206,
+      "HybridImprovementVsXGBoostUSD": 527.8016097080631,
+      "BestUniformCostUSD": 2814.6088294202286,
+      "HybridImprovementVsBestUniformUSD": 173.45278227016206,
+      "HybridReductionVsBestUniformFraction": 0.061625892897483374,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    },
+    {
+      "Branch": "ALL",
+      "Scenario": "S1_W0.5",
+      "ShortageFraction": 1.0,
+      "WasteFraction": 0.5,
+      "AllNaiveCostUSD": 3198.620169708846,
+      "AllXGBoostCostUSD": 3469.5957554315496,
+      "HybridCostUSD": 3016.5715003342375,
+      "HybridImprovementVsNaiveUSD": 182.04866937460838,
+      "HybridImprovementVsXGBoostUSD": 453.0242550973121,
+      "BestUniformCostUSD": 3198.620169708846,
+      "HybridImprovementVsBestUniformUSD": 182.04866937460838,
+      "HybridReductionVsBestUniformFraction": 0.05691475064736409,
+      "BestPolicy": "C_Hybrid",
+      "StrongestUniformBaseline": "A_AllNaive"
+    }
+  ],
+  "overallHybridWins": 9,
+  "improvementVsNaiveRangeUSD": [
+    44.65257863320744,
+    182.04866937460838
+  ],
+  "improvementVsXGBoostRangeUSD": [
+    1.09003185820211,
+    572.6680224745132
+  ],
+  "improvementVsBestUniformRangeUSD": [
+    1.09003185820211,
+    182.04866937460838
+  ]
+}

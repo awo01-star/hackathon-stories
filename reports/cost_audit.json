@@ -1,0 +1,20 @@
+{
+  "median_garden_harbour_unit_cost_ratio": 1.430232558139535,
+  "ratio_range": [
+    1.4260869565217391,
+    1.4385964912280702
+  ],
+  "garden_cost_gap_at_harbour_costs": 15923.470000000001,
+  "garden_recorded_cost": 52954.06,
+  "garden_revenue": 99748.55,
+  "garden_gross_profit": 46794.490000000005,
+  "cost_unique_max_within_branch_product": 1,
+  "price_unique_max_within_branch_product": 1,
+  "interpretation": "Accounting sensitivity, not achievable savings. Uniform multiplier may reflect cost allocation, procurement, recipe or dataset construction; validate with finance.",
+  "recoverable_gap_scenarios": {
+    "0.1": 1592.3470000000002,
+    "0.25": 3980.8675000000003,
+    "0.5": 7961.735000000001,
+    "1": 15923.470000000001
+  }
+}

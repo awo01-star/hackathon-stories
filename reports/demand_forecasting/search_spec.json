@@ -1,0 +1,85 @@
+{
+  "seed": 490,
+  "grid": {
+    "Random Forest": [
+      {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "min_samples_leaf": 2,
+        "max_features": 1.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "min_samples_leaf": 5,
+        "max_features": 1.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 2,
+        "max_features": 1.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 5,
+        "max_features": 1.0
+      }
+    ],
+    "XGBoost": [
+      {
+        "n_estimators": 150,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 2,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      },
+      {
+        "n_estimators": 150,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "min_child_weight": 5,
+        "reg_lambda": 10,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0
+      }
+    ]
+  },
+  "selectionMetric": "pooled May MAE",
+  "tieBreak": "fixed model/trial order",
+  "features": [
+    "Branch",
+    "DayOfWeek",
+    "Month",
+    "DayOfMonth",
+    "Weekend",
+    "Lag1",
+    "Lag7",
+    "RollingMean7"
+  ],
+  "target": "Transactions",
+  "testUsedForSelection": false,
+  "preprocessing": "OneHotEncoder fit inside each training-only pipeline; categorical Branch/DayOfWeek; numeric passthrough; no imputation/scaling",
+  "forecastProtocol": "Rolling one-day ahead after yesterday closes. May/June lag features use earlier observed days, never the current date."
+}

@@ -1,0 +1,4 @@
+Scope,BaselineGPUSD,NoDiscountSameVolumeGPUSD,ExposureUSD,UniformUnitLossBreakEven,BaselineUnits
+Discounted units only; unchanged affected-product mix,285.79999999999995,407.42999999999995,121.63000000000001,0.298529808801512,162
+All seven products; uniform volume/mix change,6171.0,6292.63,121.63000000000001,0.019328961022656663,2510
+Whole Garden branch; uniform volume/mix change,46794.490000000005,46916.12,121.63000000000001,0.002592499123968478,17833

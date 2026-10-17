@@ -1,0 +1,142 @@
+{
+  "transactions": {
+    "validation": {
+      "xgb_depth2": {
+        "mae": 1.6410659956147895,
+        "wape": 0.40293917363984816,
+        "bias": -0.03671626271548377
+      },
+      "xgb_depth4": {
+        "mae": 1.6050751198702866,
+        "wape": 0.39410215320933734,
+        "bias": -0.02751247585514055
+      },
+      "lag7": {
+        "mae": 2.210626185958254,
+        "wape": 0.5427861469172232,
+        "bias": -0.02686752601335611
+      },
+      "mean7": {
+        "mae": 1.8531670732809253,
+        "wape": 0.4550174161915116,
+        "bias": 0.0006434007055221125
+      },
+      "mean28": {
+        "mae": 1.7474473660431913,
+        "wape": 0.42905952565837635,
+        "bias": -0.03301311206265404
+      },
+      "seasonal_blend": {
+        "mae": 1.6570434625463089,
+        "wape": 0.4068622013178621,
+        "bias": -0.04368468928183161
+      }
+    },
+    "selectedForPlanning": "xgb_depth4",
+    "selectedML": "xgb_depth4",
+    "bestBaseline": "seasonal_blend",
+    "test": {
+      "lag7": {
+        "mae": 2.23921568627451,
+        "wape": 0.49609035621198955,
+        "bias": -0.008688097306689836
+      },
+      "mean7": {
+        "mae": 1.9208216619981326,
+        "wape": 0.42555128046005547,
+        "bias": -0.02267179678126679
+      },
+      "mean28": {
+        "mae": 1.8566059757236228,
+        "wape": 0.4113245211203509,
+        "bias": -0.05172003640726492
+      },
+      "seasonal_blend": {
+        "mae": 1.7326097105508869,
+        "wape": 0.38385358487443627,
+        "bias": -0.04803276653841375
+      },
+      "xgb_depth4": {
+        "mae": 1.676261521320717,
+        "wape": 0.37136984182170535,
+        "bias": -0.029385961935273677
+      }
+    },
+    "pairedDayBootstrapMAEImprovementCI95": [
+      0.029765015693884064,
+      0.08868942643998383
+    ],
+    "testCells": 1530,
+    "protocol": "Jan-Apr training after 28-day warmup; May selection by MAE; refit Jan-May; June rolling one-day holdout. This is an additional task explored after earlier June results; prospective validation needed."
+  },
+  "revenue": {
+    "validation": {
+      "xgb_depth2": {
+        "mae": 16.362455272952037,
+        "wape": 0.44841504952833505,
+        "bias": -0.03720110153501602
+      },
+      "xgb_depth4": {
+        "mae": 16.29636933286306,
+        "wape": 0.44660395641279804,
+        "bias": -0.00999180208164502
+      },
+      "lag7": {
+        "mae": 22.85237191650854,
+        "wape": 0.6262719936488073,
+        "bias": -0.023977833227451083
+      },
+      "mean7": {
+        "mae": 18.53027649769585,
+        "wape": 0.5078244502353901,
+        "bias": 0.0020103773955182035
+      },
+      "mean28": {
+        "mae": 17.344807761814405,
+        "wape": 0.4753365373245873,
+        "bias": -0.03176524433012781
+      },
+      "seasonal_blend": {
+        "mae": 16.659250813228518,
+        "wape": 0.4565487669119888,
+        "bias": -0.04201178331011603
+      }
+    },
+    "selectedForPlanning": "xgb_depth4",
+    "selectedML": "xgb_depth4",
+    "bestBaseline": "seasonal_blend",
+    "test": {
+      "lag7": {
+        "mae": 22.009300653594774,
+        "wape": 0.5375655569601845,
+        "bias": -0.015647785698082423
+      },
+      "mean7": {
+        "mae": 18.66085247432306,
+        "wape": 0.45578147673096936,
+        "bias": -0.027662528045098254
+      },
+      "mean28": {
+        "mae": 18.10946148459384,
+        "wape": 0.44231404270560853,
+        "bias": -0.05487559220508584
+      },
+      "seasonal_blend": {
+        "mae": 17.23393300653595,
+        "wape": 0.42092972153387603,
+        "bias": -0.0515008302382175
+      },
+      "xgb_depth4": {
+        "mae": 16.781218902375965,
+        "wape": 0.4098724183793233,
+        "bias": -0.030380122614044273
+      }
+    },
+    "pairedDayBootstrapMAEImprovementCI95": [
+      0.16069386101463579,
+      0.8057184509632631
+    ],
+    "testCells": 1530,
+    "protocol": "Jan-Apr training after 28-day warmup; May selection by MAE; refit Jan-May; June rolling one-day holdout. This is an additional task explored after earlier June results; prospective validation needed."
+  }
+}

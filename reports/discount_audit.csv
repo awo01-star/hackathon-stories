@@ -1,0 +1,57 @@
+Branch,Category,Discount Rate,lines,quantity,revenue,gross_profit
+Garden,Bakery,0.0,3356,3531,14326.35,7021.5
+Garden,Bakery,0.1,185,194,713.22,307.96
+Garden,Breakfast,0.0,743,792,6767.4,2757.54
+Garden,Breakfast,0.1,42,47,369.43,122.69
+Garden,Cold Coffee,0.0,2207,2325,12317.15,6991.26
+Garden,Cold Coffee,0.1,132,142,665.37,351.56
+Garden,Cold Drinks,0.0,1618,1709,6680.35,3585.3
+Garden,Cold Drinks,0.1,97,100,349.52,162.51
+Garden,Desserts,0.0,1748,1838,11216.300000000001,4041.51
+Garden,Desserts,0.1,110,118,647.52,186.84
+Garden,Hot Coffee,0.0,2477,2605,12020.25,6889.070000000001
+Garden,Hot Coffee,0.1,147,153,660.4,341.95
+Garden,Matcha & Tea,0.0,2340,2468,15435.6,7717.0199999999995
+Garden,Matcha & Tea,0.1,130,141,776.51,351.71
+Garden,Meals,0.0,446,477,5044.25,1949.6100000000001
+Garden,Meals,0.1,23,23,228.12,71.05
+Garden,Sandwiches,0.0,1045,1103,10930.25,3784.63
+Garden,Sandwiches,0.1,61,67,600.56,160.78
+Harbour,Bakery,0.0,5248,5526,23641.88,15581.23
+Harbour,Bakery,0.1,298,322,1222.2,763.78
+Harbour,Breakfast,0.0,1046,1110,9963.92,6024.33
+Harbour,Breakfast,0.1,61,61,493.12,277.14
+Harbour,Cold Coffee,0.0,3131,3336,18516.26,13223.45
+Harbour,Cold Coffee,0.1,182,192,963.63,653.83
+Harbour,Cold Coffee,0.15,324,349,1621.8700000000001,1085.35
+Harbour,Cold Drinks,0.0,2341,2484,10026.95,6896.18
+Harbour,Cold Drinks,0.1,134,142,511.37,325.1
+Harbour,Desserts,0.0,1640,1730,11103.14,6365.79
+Harbour,Desserts,0.1,94,100,575.04,301.93
+Harbour,Desserts,0.15,180,193,1053.77,524.37
+Harbour,Hot Coffee,0.0,3741,3958,19022.23,13629.68
+Harbour,Hot Coffee,0.1,261,274,1162.74,799.0
+Harbour,Matcha & Tea,0.0,3475,3669,23876.7,15965.47
+Harbour,Matcha & Tea,0.1,229,238,1394.03,881.8399999999999
+Harbour,Meals,0.0,634,680,7483.8,4427.95
+Harbour,Meals,0.1,26,26,273.51,145.96
+Harbour,Sandwiches,0.0,1520,1611,16719.23,9441.96
+Harbour,Sandwiches,0.1,89,92,858.1899999999999,439.6
+Uptown,Bakery,0.0,1874,1982,7683.1900000000005,4945.89
+Uptown,Bakery,0.1,118,126,439.90000000000003,263.4
+Uptown,Breakfast,0.0,413,433,3554.7200000000003,2078.29
+Uptown,Breakfast,0.1,29,32,243.34,129.52
+Uptown,Cold Coffee,0.0,1229,1293,6604.6,4606.48
+Uptown,Cold Coffee,0.1,97,108,490.45,324.79
+Uptown,Cold Drinks,0.0,941,986,3565.19,2397.09
+Uptown,Cold Drinks,0.1,67,69,238.79999999999998,150.96
+Uptown,Desserts,0.0,628,677,3996.92,2207.52
+Uptown,Desserts,0.1,35,35,184.38,92.54
+Uptown,Hot Coffee,0.0,1449,1528,6697.88,4706.31
+Uptown,Hot Coffee,0.1,73,77,292.61,197.67
+Uptown,Matcha & Tea,0.0,1327,1402,8385.960000000001,5461.68
+Uptown,Matcha & Tea,0.1,79,80,438.24,267.24
+Uptown,Meals,0.0,270,287,2981.5499999999997,1697.49
+Uptown,Meals,0.1,10,11,100.4,53.2
+Uptown,Sandwiches,0.0,925,980,9321.24,5072.35
+Uptown,Sandwiches,0.1,52,55,473.64,229.64

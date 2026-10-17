@@ -1,0 +1,46 @@
+{
+  "step": 6,
+  "sourceSHA256": "f1672e728c28295b2b802d878fd38a158ba039827b429355e8438ee0463237a1",
+  "dateRange": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "branches": [
+    "Garden",
+    "Harbour",
+    "Uptown"
+  ],
+  "calendarDaysPerBranch": 181,
+  "observations": 543,
+  "missingBranchDays": 0,
+  "missingFeatureValues": {
+    "Branch": 0,
+    "DayOfWeek": 0,
+    "Month": 0,
+    "DayOfMonth": 0,
+    "Weekend": 0,
+    "Lag1": 3,
+    "Lag7": 21,
+    "RollingMean7": 21
+  },
+  "missingValuesAllColumns": {
+    "Branch": 0,
+    "Date": 0,
+    "DayOfWeek": 0,
+    "Month": 0,
+    "DayOfMonth": 0,
+    "Weekend": 0,
+    "Lag1": 3,
+    "Lag7": 21,
+    "RollingMean7": 21,
+    "Transactions": 0,
+    "MissingBranchDay": 0
+  },
+  "completeHistoryRows": 522,
+  "target": "Observed unique transactions per branch/calendar date, not unconstrained demand. Absent branch-days remain unknown; no automatic zeros.",
+  "forecastOrigin": "After the previous day closes; one day ahead. Lag1 is not available for every day of a week-ahead forecast.",
+  "rollingDefinition": "Previous seven calendar dates, excluding current date; all seven observations required. Missing history propagates.",
+  "modelTrained": false,
+  "csv": "/Users/aya/Downloads/hack/daily_demand_features.csv",
+  "excludedRowsOutsideDateRange": 0
+}

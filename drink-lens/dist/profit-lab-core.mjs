@@ -1,0 +1,3 @@
+export function dollarImpact(policy,loss){if(!Number.isFinite(loss)||loss<0||loss>1)throw Error('Invalid volume loss');return(1-loss)*(policy.recordedGPPerDay+policy.sameVolumeGPIncreasePerDay)-policy.recordedGPPerDay;}
+export function availableAlternatives(item,blocked=''){return item.alternatives.filter(p=>!blocked||!p.assumedGroups.includes(blocked));}
+export function rankPortfolio(items,branch,count){if(!Number.isInteger(count)||count<1||count>10)throw Error('Invalid attention slots');return items.filter(p=>p.branch===branch).sort((a,b)=>b.score-a.score||a.product.localeCompare(b.product)).slice(0,count);}

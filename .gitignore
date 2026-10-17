@@ -1,0 +1,46 @@
+# Do not publish company transaction records or row-level derivatives.
+data/
+artifacts/
+*.joblib
+*.csv.tmp
+__pycache__/
+.venv/
+.DS_Store
+*.log
+
+# Generated daily operational feature table; regenerate from local input.
+/daily_demand_features.csv
+
+# Raw input, if copied into the project root.
+/stories_transactions.csv
+
+# Local dependencies, caches and notebook checkpoints.
+node_modules/
+venv/
+.ipynb_checkpoints/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Local secrets and editor settings; keep example configuration shareable.
+.env
+.env.*
+!.env.example
+!.env.sample
+.vscode/
+.idea/
+
+# Temporary exports, browser test output and archives.
+playwright-report/
+test-results/
+coverage/
+*.tmp
+*.swp
+*.swo
+*.zip
+*.tar.gz
+
+# Keep notebooks/, drink-lens/dist/ (including reference pictures), src/,
+# reports/, figures/, README and requirements available for commits.
