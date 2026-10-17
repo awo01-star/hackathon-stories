@@ -132,7 +132,7 @@ Created and executed [05_hybrid_forecasting_strategy.ipynb](notebooks/05_hybrid_
 
 ## Profit Lab — Ideas 9–15 implemented
 
-[Open the private Profit Lab](https://stories-drink-lens-aya.sprycorgi128.chatgpt.site/profit-lab.html) · [Full evidence and assumptions](reports/profit_lab/REPORT.md) · [Executed notebook](notebooks/04_profit_lab.ipynb) · [Machine-readable results](reports/profit_lab/findings.json).
+(The interactive Profit Lab page is a private deployment that graders cannot open; everything it shows is in the files below.) [Full evidence and assumptions](reports/profit_lab/REPORT.md) · [Executed notebook](notebooks/04_profit_lab.ipynb) · [Machine-readable results](reports/profit_lab/findings.json).
 
 | Idea | Implementation | What the evidence supports |
 |---|---|---|
@@ -326,4 +326,4 @@ Additional reproducibility scripts are in `src/`; each model pipeline accepts `-
 
 ## Submission
 
-Submit one public GitHub repository URL; team members are listed at the top of this README. This workspace contains source and aggregate evidence; no public GitHub submission has been created. Source CSVs, individual prediction records, serialized models and exports stay in ignored `data/` or `artifacts/` folders. Do not put the company CSV at the repository root. Review aggregate evidence for permitted release before publication. The private app deployment is separate from the public-repository submission.
+Submit one public GitHub repository URL; team members are listed at the top of this README. This workspace contains source and aggregate evidence; the repository is `github.com/awo01-star/hackathon-stories` and must be set to public before submission. Source CSVs, individual prediction records, serialized models and exports stay in ignored `data/` or `artifacts/` folders. Do not put the company CSV at the repository root. Review aggregate evidence for permitted release before publication. The private app deployment is separate from the public-repository submission.
