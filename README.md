@@ -12,8 +12,10 @@ The camera and offer planner are supporting prototypes. Their existence is not e
 - **Garden mechanism:** the same products have about 43% higher recorded unit costs and 5% lower prices than Harbour. Product mix does not explain that within-product difference. Cost allocation, actual landed cost and recipes/waste need reconciliation before claiming savings. At Garden's own volumes, the six-month cost-gap sensitivity is $15,923; 25% truly removable would be $3,981 before implementation cost, **conditional on verification**.
 - **Tuesday:** the effect persists within weeks, across hours, with illustrative calendar controls and after excluding recorded 15% campaign dates. The adjusted ratio is approximately 1.66, with almost identical mean basket value. The measured mechanism is more transactions, not larger baskets. Payday, hidden promotions, events and data transformations remain competing behavioral explanations; none is proven.
 - **Growth:** about 99.6% of the January–June revenue/day accounting increase comes from transaction counts. That does not distinguish footfall, conversion, acquisition or repeat purchases.
+- **Tuesday outside the dataset:** real Stories shops in Lebanon show no Tuesday peak in Google Maps popular times (Tuesday index 0.74 to 1.10 across 10 branches, never the busiest day), and a public three-shop benchmark shows none either. This makes a data artifact more likely than a chain-wide driver, without proving it. See [Tuesday: external checks](#tuesday-external-checks).
+- **Offers:** two bundles at 10% off are the strongest testable offer (about $6,000 to $20,000 a year at 10 to 20% take-up, a pilot can measure it). See [Offer pilots](#offer-pilots-notebooks-0608).
 
-The source CSV and the user's `01_eda.ipynb` are unchanged. Exact duplicates are retained in the primary analysis and checked as a sensitivity; their removal is not automatically justified. Customer first-observed dates and missing IDs are treated cautiously.
+The source CSV is unchanged. The user's EDA is now in the repository as [notebooks/01_eda.ipynb](notebooks/01_eda.ipynb). Exact duplicates are retained in the primary analysis and checked as a sensitivity; their removal is not automatically justified. Customer first-observed dates and missing IDs are treated cautiously.
 
 ## Step 5 — Tuesday versus other working weekdays
 
@@ -112,6 +114,34 @@ python3 src/verify_profit_lab.py
 ```
 
 June was examined in earlier work, so these are exploratory internal holdouts. Basket metrics are retrieval measures; the profit-risk target uses pinball loss and coverage. None inherits the earlier category model's AUC.
+
+## Tuesday: external checks
+
+[Full report](reports/tuesday_external/REPORT.md) · [Google Maps readings](reports/tuesday_external/google_popular_times.csv) · [EDA notebook](notebooks/01_eda.ipynb)
+
+Ten explanations were tested inside the dataset (promotions, product or category events, one-branch events, catering, a Tuesday customer segment, repeat visits, double posting, payday and calendar). None explains the spike; it behaves like a uniform multiplier on every branch, hour, product and customer. Two outside checks followed. Ratios below are a **weekday index** (a weekday's average divided by the branch's seven-day average), not the 1.535× weekday comparator in Step 5.
+
+| | Mon | **Tue** | Wed | Thu | Fri | Sat | Sun |
+|---|---|---|---|---|---|---|---|
+| Stories dataset (3 branches) | 0.95 | **1.52** | 0.99 | 0.97 | 1.05 | 0.69 | 0.83 |
+| Real Stories shops, Google Maps (mean of 10) | 0.93 | **0.95** | 1.00 | 1.02 | 1.11 | 1.01 | 0.97 |
+| Maven Roasters benchmark (3 NYC shops) | 0.97 to 1.04 | **0.97 to 1.03** | 0.98 to 1.01 | 1.00 to 1.02 | 1.00 to 1.03 | 0.98 to 1.02 | 0.97 to 1.01 |
+
+The evening peak matches real shops; the Tuesday spike and the weak Saturday do not. Popular times are relative phone-location busyness from recent months, not Jan to Jun 2026 sales, and the dataset's branches cannot be matched to real shops. **Cheapest next step:** compare raw POS totals for a few Tuesdays with this file and check the marketing calendar.
+
+## Offer pilots (notebooks 06–08)
+
+These notebooks remove the 132 exact duplicate rows (see [01_eda.ipynb](notebooks/01_eda.ipynb)); the primary analysis above keeps them. Money figures are **changes in gross profit**, estimated for a 4-week pilot (6 Jul to 2 Aug 2026) with a trend forecast tested on unseen months (9% WAPE vs 22% for a weekday average). Take-up is unknown in this data, because no bundle was ever sold and past discounts were not random, so every notebook ends in a pilot, not a rollout.
+
+| Notebook | Offer | Measured | Estimated | Recommendation |
+|---|---|---|---|---|
+| [06_bundle_offers.ipynb](notebooks/06_bundle_offers.ipynb) | Bakery + matcha/tea, and cold drink + sandwich, 10% off | Pairs chosen Jan–Mar, confirmed Apr–Jun (lift 1.8 and 2.1). Break-even take-up 3–6% at Harbour/Uptown, 5–9% at Garden | −$578 (no take-up) to +$1,534 per 4 weeks; about $6,000–$20,000/yr at 10–20% take-up | 4-week pilot at all branches; detects ~4% take-up |
+| [07_couple_offer.ipynb](notebooks/07_couple_offer.ipynb) | With 2+ drinks, a bakery item 20% off | Two-drink baskets have food 23% vs 47%, but mostly because baskets never exceed 3 lines. Group orders cannot be targeted by time | −$107 to +$236 per 4 weeks; about $800–$3,000/yr | Check real till data first; pilot only if real groups skip food |
+| [08_slow_seller_addons.ipynb](notebooks/08_slow_seller_addons.ipynb) | Slow sellers as add-ons at 30% off (best: Quinoa Bowl with a cold drink) | Slow sellers are cheapest to discount: median break-even 1.5% vs 3.8%, because few customers already buy them | $133–$273 per 100 add-ons; waste savings (assumed) add 30–70% | 8-week A/B pilot against popular items; a low result flags the item for menu removal |
+
+`08` corrects the "rejected: pushing slow sellers" point inside `06`, which judged slow sellers on margin percentage alone. The offers overlap on bakery, so their estimates must not be added and their pilots should run in separate weeks. Garden's higher recorded unit costs (see the root-cause findings above) roughly double the take-up its offers need to break even.
+
+**Run them:** put the CSV at `data/stories_transactions.csv` (ignored by git) or set `STORIES_DATA=/path/to/stories_transactions.csv`, then open the notebooks from the repository root or `notebooks/`. Figures are written to `figures/eda/`, `figures/bundle_offers/`, `figures/couple_offer/` and `figures/slow_seller_addons/`.
 
 ## Reproduce the investigation
 
