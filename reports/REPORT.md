@@ -102,7 +102,7 @@ The paired day-bootstrap interval for baseline log loss minus ML log loss is [0.
 
 ## Inspection and reproducibility
 
-Run commands in the root [README](../README.md). Machine-readable evidence: [forecast metrics](forecast_metrics.json), [classification metrics](metrics.json), [cost audit](cost_audit.json), [data audit](data_audit.json). Model hyperparameters and preprocessing live in `src/`. Figures and aggregate CSVs are generated from the source CSV; raw data, row-level predictions and serialized models are excluded from publication by default. Training has fixed random seed 490. The source-file SHA-256 is recorded to identify the input without publishing it. Team names must be filled in before submission. No public repository has been created or submission sent.
+Run commands in the root [full report](../FULL_REPORT.md). Machine-readable evidence: [forecast metrics](forecast_metrics.json), [classification metrics](metrics.json), [cost audit](cost_audit.json), [data audit](data_audit.json). Model hyperparameters and preprocessing live in `src/`. Figures and aggregate CSVs are generated from the source CSV; raw data, row-level predictions and serialized models are excluded from publication by default. Training has fixed random seed 490. The source-file SHA-256 is recorded to identify the input without publishing it. Team names must be filled in before submission. No public repository has been created or submission sent.
 
 ## Additional robustness and policy evidence
 
