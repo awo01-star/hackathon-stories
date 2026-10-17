@@ -177,7 +177,7 @@ These notebooks remove the 132 exact duplicate rows (see [01_eda.ipynb](notebook
 
 | Pattern | Evidence | Looks like a fixed setting? | Finding that depends on it |
 |---|---|---|---|
-| Branch costs and prices | Cost ×1.43 (Garden) and ×0.96 (Uptown) of Harbour; Garden price ÷1.05; Uptown price = Garden ×0.96; 45 of 45 products, to the cent | **Yes, exact formula** | Garden cost and price gaps |
+| Branch costs and prices | Cost ×1.43 (Garden) and ×0.96 (Uptown) of Harbour; Garden price ÷1.05; Uptown price = Garden ×0.96; 45 of 45 products, to the cent. A flat extra amount per item (+$0.95) misses by $0.45 on average, and every category has the same 1.43 ratio | **Yes, exact formula** | Garden cost and price gaps |
 | Day-to-day variation | Dispersion 0.99 (1.0 = pure chance); Maven 4.48 | **Yes** | Forecast accuracy |
 | Weekday and hourly rhythm | Branches differ by 0.013 in weekday index (real Stories shops 0.145); same hourly shape at every branch and weekday | **Yes, one shared setting** | Tuesday spike, weak Saturday |
 | Basket rules | Max 3 lines; one quantity-2 rate for all products | **Yes** | Basket and offer analyses |
