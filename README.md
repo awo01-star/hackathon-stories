@@ -39,6 +39,8 @@ Reproduce: `python3 src/item_discount_scenarios.py --data /path/to/stories_trans
 - **Tuesday:** the effect persists within weeks, across hours, with illustrative calendar controls and after excluding recorded 15% campaign dates. The adjusted ratio is approximately 1.66, with almost identical mean basket value. The measured mechanism is more transactions, not larger baskets. Payday, hidden promotions, events and data transformations remain competing behavioral explanations; none is proven.
 - **Growth:** about 99.6% of the January–June revenue/day accounting increase comes from transaction counts. That does not distinguish footfall, conversion, acquisition or repeat purchases.
 - **Tuesday outside the dataset:** real Stories shops in Lebanon show no Tuesday peak in Google Maps popular times (Tuesday index 0.74 to 1.10 across 10 branches, never the busiest day), and a public three-shop benchmark shows none either. This makes a data artifact more likely than a chain-wide driver, without proving it. See [Tuesday: external checks](#tuesday-external-checks).
+- **Branch costs and prices are exact formulas:** Garden's unit cost is `round(Harbour cost × 1.43, 2)` and its price `round(Harbour price ÷ 1.05, 2)` on all 45 products, so the Garden cost gap cannot come from product-by-product supplier, recipe or waste differences. Daily sales also vary exactly as much as pure chance predicts, and all branches share one weekday rhythm. See [Data patterns and Garden outlook](#data-patterns-and-garden-outlook-notebooks-1011).
+- **Garden outlook:** about $57,000 to $77,000 gross profit in July–December 2026. What the 1.43 multiplier contains is worth $0 to $26,000 of that period's gross profit, against at most about $200 for the discount review.
 - **Offers:** two bundles at 10% off are the strongest testable offer (about $6,000 to $20,000 a year at 10 to 20% take-up, a pilot can measure it). See [Offer pilots](#offer-pilots-notebooks-0608).
 
 The source CSV is unchanged. The user's EDA is now in the repository as [notebooks/01_eda.ipynb](notebooks/01_eda.ipynb). Exact duplicates are retained in the primary analysis and checked as a sensitivity; their removal is not automatically justified. Customer first-observed dates and missing IDs are treated cautiously.
@@ -167,7 +169,40 @@ These notebooks remove the 132 exact duplicate rows (see [01_eda.ipynb](notebook
 
 `08` corrects the "rejected: pushing slow sellers" point inside `06`, which judged slow sellers on margin percentage alone. The offers overlap on bakery, so their estimates must not be added and their pilots should run in separate weeks. Garden's higher recorded unit costs (see the root-cause findings above) roughly double the take-up its offers need to break even.
 
-**Run them:** put the CSV at `data/stories_transactions.csv` (ignored by git) or set `STORIES_DATA=/path/to/stories_transactions.csv`, then open the notebooks from the repository root or `notebooks/`. Figures are written to `figures/eda/`, `figures/bundle_offers/`, `figures/couple_offer/` and `figures/slow_seller_addons/`.
+## Data patterns and Garden outlook (notebooks 10–11)
+
+### Which patterns are real, and which are settings of the data?
+
+[10_data_fingerprints.ipynb](notebooks/10_data_fingerprints.ipynb) asks whether the patterns the team explains are as irregular as real shop data, compared with Maven Roasters (3 NYC shops) and Google Maps popular times for 10 real Stories shops.
+
+| Pattern | Evidence | Looks like a fixed setting? | Finding that depends on it |
+|---|---|---|---|
+| Branch costs and prices | Cost ×1.43 (Garden) and ×0.96 (Uptown) of Harbour; Garden price ÷1.05; Uptown price = Garden ×0.96; 45 of 45 products, to the cent | **Yes, exact formula** | Garden cost and price gaps |
+| Day-to-day variation | Dispersion 0.99 (1.0 = pure chance); Maven 4.48 | **Yes** | Forecast accuracy |
+| Weekday and hourly rhythm | Branches differ by 0.013 in weekday index (real Stories shops 0.145); same hourly shape at every branch and weekday | **Yes, one shared setting** | Tuesday spike, weak Saturday |
+| Basket rules | Max 3 lines; one quantity-2 rate for all products | **Yes** | Basket and offer analyses |
+| Customer branch choice | Matches random choice (93.8% vs 94.0% seen at more than one branch) | **Yes** | Customer and loyalty findings |
+| Growth | 1.7–2.0% a week by branch | Unclear | Growth decomposition |
+| Product mix by branch | Differs significantly (Garden more desserts, Uptown more sandwiches) | No | Mix effects |
+
+Zone pricing and standard-cost allocation are normal accounting practice, so this does not prove the data was simulated. It does show the Garden gaps are formulas, and that the Tuesday and Saturday patterns are one setting shared by every branch. **One question to Stories resolves most of it:** how was this file produced, and how are branch standard costs and prices calculated?
+
+### Garden: profit outlook and which lever matters
+
+[11_garden_profit_outlook.ipynb](notebooks/11_garden_profit_outlook.ipynb) forecasts Garden's gross profit and values each lever for July–December 2026.
+
+- **Forecast (estimate):** $56,800 if growth stops, $77,300 if the Jan–Jun trend continues (Jan–Jun actual: $46,700). Tested on May–Jun: 10% daily error and a two-month total within 0.4%, against 15% and 25% for simple baselines.
+- **Transaction gap:** Garden runs at about 68% of Harbour's traffic at every hour, weekday and month (no significant differences), so no time-targeted action closes it.
+
+| Lever, July–December 2026 | Gross profit change | Decided by |
+|---|---|---|
+| Cost gap (×1.43) | $0 to $26,000; about $1,900–$2,600 per 10% that is avoidable | Whether the 1.43 is allocation or real cash |
+| Match Harbour prices (+5%) | Up to $6,000–$8,000 with no customers lost; $0 at 9.6% lost; −$3,400 to −$4,600 at 15% lost | Customer response, never observed |
+| Discount review (153 lines) | At most about $150–$200 | Already small |
+
+**Recommended order:** ask finance what the 1.43 contains (the only Garden question worth tens of thousands). If it is allocation, use Harbour-equivalent costs for operating decisions: Garden's bundle break-even then falls from 9.2% and 5.4% to 6.1% and 2.8%, in line with the other branches. Test a +5% price on one category for 4 weeks before changing Garden's prices.
+
+**Run notebooks 01, 06–08, 10 and 11:** put the CSV at `data/stories_transactions.csv` (ignored by git) or set `STORIES_DATA=/path/to/stories_transactions.csv`, then open the notebooks from the repository root or `notebooks/`. Notebook 10's Maven comparison needs the [Maven Roasters file](https://mavenanalytics.io/data-playground/coffee-shop-sales) at `data/Coffee Shop Sales.xlsx` (or `MAVEN_DATA`); it is skipped if missing. Figures are written to `figures/eda/`, `figures/bundle_offers/`, `figures/couple_offer/`, `figures/slow_seller_addons/`, `figures/data_fingerprints/` and `figures/garden_outlook/`.
 
 ## Reproduce the investigation
 
